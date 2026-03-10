@@ -25,25 +25,43 @@
     <span class="nav-name">Rubén Erimo</span>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html#trabajos">Trabajos</a></li>
-    <li><a href="index.html#about">Nosotros</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta">Hablemos</a>
+    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
 
 <!-- SUBPAGE CONTENT -->
 <div class="subpage active">
-  <a href="index.html" class="subpage-back">← Volver</a>
+  <a href="index.html" class="subpage-back" data-es="← Volver" data-en="← Back">← Volver</a>
   <h1 class="subpage-title">LIFESTYLE</h1>
-  <p class="subpage-subtitle">Lo cotidiano elevado a arte visual.</p>
+  <p class="subpage-subtitle" data-es="Lo cotidiano elevado a arte visual." data-en="The everyday elevated to visual art.">Lo cotidiano elevado a arte visual.</p>
 
   <div class="subpage-session">
-    <h3 class="session-name">Ansy</h3>
+    <h3 class="session-name" data-es="Ansy" data-en="Ansy">Ansy</h3>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/ansy/DSC_0065.JPG" alt="Ansy — Lifestyle" loading="lazy"></div>
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/ansy/DSC_0117 - copia.JPG" alt="Ansy — Lifestyle" loading="lazy"></div>
@@ -54,7 +72,7 @@
   </div>
 
   <div class="subpage-session">
-    <h3 class="session-name">Rhadi</h3>
+    <h3 class="session-name" data-es="Rhadi" data-en="Rhadi">Rhadi</h3>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Rhadi/_DSC0050.JPG" alt="Rhadi — Lifestyle" loading="lazy"></div>
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Rhadi/_DSC0085.jpg" alt="Rhadi — Lifestyle" loading="lazy"></div>
@@ -70,8 +88,8 @@
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="index.html#trabajos">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Arriba ↑</a>
+    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
   </div>
 </footer>
 

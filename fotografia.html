@@ -25,32 +25,50 @@
     <span class="nav-name">Rubén Erimo</span>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html#trabajos">Trabajos</a></li>
-    <li><a href="index.html#about">Nosotros</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta">Hablemos</a>
+    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
 
 <!-- CONTENT -->
 <div class="service-page">
-  <a href="index.html#services" class="subpage-back">← Volver a servicios</a>
+  <a href="nosotros.html#services" class="subpage-back" data-es="← Volver a servicios" data-en="← Back to services">← Volver a servicios</a>
 
   <div class="service-page-header">
-    <div class="section-label">Servicio</div>
+    <div class="section-label" data-es="Servicio" data-en="Service">Servicio</div>
     <h1 class="service-page-title">FOTOGRAFÍA</h1>
-    <p class="service-page-subtitle">Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten.</p>
+    <p class="service-page-subtitle" data-es="Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten." data-en="Events, portraits, product, editorial. Images that aren't just seen — they're felt.">Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten.</p>
   </div>
 
   <div class="service-page-body">
     <div class="service-page-text">
-      <h2 class="service-section-heading">Cada imagen <span class="italic">cuenta algo</span></h2>
-      <p>La fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. Trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto.</p>
-      <p>Desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo.</p>
+      <h2 class="service-section-heading" data-es-html="Cada imagen <span class='italic'>cuenta algo</span>" data-en-html="Every image <span class='italic'>tells a story</span>">Cada imagen <span class="italic">cuenta algo</span></h2>
+      <p data-es="La fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. Trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto." data-en="Photography isn't just about capturing a moment — it's about freezing an emotion, preserving a story and creating something that transcends time. I work with natural and artificial light to achieve the perfect atmosphere for every project.">La fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. Trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto.</p>
+      <p data-es="Desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo." data-en="From intimate portraits to large event coverage, every commission receives the same attention to detail and creative vision that defines my work.">Desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo.</p>
     </div>
 
     <div class="service-page-image">
@@ -61,28 +79,28 @@
   <div class="service-features">
     <div class="service-feature">
       <div class="feature-num">01</div>
-      <h3 class="feature-title">Retratos</h3>
-      <p class="feature-desc">Sesiones personales y profesionales. Capturo tu esencia con un enfoque artístico que va más allá de la foto convencional.</p>
+      <h3 class="feature-title" data-es="Retratos" data-en="Portraits">Retratos</h3>
+      <p class="feature-desc" data-es="Sesiones personales y profesionales. Capturo tu esencia con un enfoque artístico que va más allá de la foto convencional." data-en="Personal and professional sessions. I capture your essence with an artistic approach that goes beyond conventional photography.">Sesiones personales y profesionales. Capturo tu esencia con un enfoque artístico que va más allá de la foto convencional.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">02</div>
-      <h3 class="feature-title">Eventos</h3>
-      <p class="feature-desc">Bodas, fiestas, corporativos. Documento cada momento clave con un ojo discreto y resultados impactantes.</p>
+      <h3 class="feature-title" data-es="Eventos" data-en="Events">Eventos</h3>
+      <p class="feature-desc" data-es="Bodas, fiestas, corporativos. Documento cada momento clave con un ojo discreto y resultados impactantes." data-en="Weddings, parties, corporate events. I document every key moment with a discreet eye and stunning results.">Bodas, fiestas, corporativos. Documento cada momento clave con un ojo discreto y resultados impactantes.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">03</div>
-      <h3 class="feature-title">Editorial</h3>
-      <p class="feature-desc">Producciones para revistas, marcas y campañas. Conceptualización, dirección y ejecución visual completa.</p>
+      <h3 class="feature-title" data-es="Editorial" data-en="Editorial">Editorial</h3>
+      <p class="feature-desc" data-es="Producciones para revistas, marcas y campañas. Conceptualización, dirección y ejecución visual completa." data-en="Productions for magazines, brands and campaigns. Full conceptualization, direction and visual execution.">Producciones para revistas, marcas y campañas. Conceptualización, dirección y ejecución visual completa.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">04</div>
-      <h3 class="feature-title">Producto</h3>
-      <p class="feature-desc">Fotografía de producto para e-commerce, catálogos y redes sociales. Imágenes limpias que venden.</p>
+      <h3 class="feature-title" data-es="Producto" data-en="Product">Producto</h3>
+      <p class="feature-desc" data-es="Fotografía de producto para e-commerce, catálogos y redes sociales. Imágenes limpias que venden." data-en="Product photography for e-commerce, catalogs and social media. Clean images that sell.">Fotografía de producto para e-commerce, catálogos y redes sociales. Imágenes limpias que venden.</p>
     </div>
   </div>
 
   <div class="service-gallery">
-    <h2 class="service-section-heading" style="margin-bottom:40px;">Algunas <span class="italic">muestras</span></h2>
+    <h2 class="service-section-heading" style="margin-bottom:40px;" data-es-html="Algunas <span class='italic'>muestras</span>" data-en-html="Some <span class='italic'>samples</span>">Algunas <span class="italic">muestras</span></h2>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Brandy/_DSC1121.JPG" alt="Fotografía — Brandy" loading="lazy"></div>
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Rema/_DSC5188.JPG" alt="Fotografía — Rema" loading="lazy"></div>
@@ -94,9 +112,9 @@
   </div>
 
   <div class="service-cta">
-    <h2 class="service-section-heading">¿Necesitas un <span class="italic">fotógrafo</span>?</h2>
-    <p>Cuéntame tu proyecto y creamos juntos algo memorable.</p>
-    <a href="index.html#contact" class="cta-btn"><span>Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <h2 class="service-section-heading" data-es-html="¿Necesitas un <span class='italic'>fotógrafo</span>?" data-en-html="Need a <span class='italic'>photographer</span>?">¿Necesitas un <span class="italic">fotógrafo</span>?</h2>
+    <p data-es="Cuéntame tu proyecto y creamos juntos algo memorable." data-en="Tell me about your project and let's create something memorable together.">Cuéntame tu proyecto y creamos juntos algo memorable.</p>
+    <a href="index.html#contact" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </div>
 
@@ -105,8 +123,8 @@
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="index.html#trabajos">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Arriba ↑</a>
+    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
   </div>
 </footer>
 

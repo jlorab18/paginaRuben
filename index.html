@@ -35,16 +35,34 @@
     <span class="nav-name">Rubén Erimo</span>
   </div>
   <ul class="nav-links">
-    <li><a href="#trabajos">Trabajos</a></li>
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#services">Servicios</a></li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="#contact" class="nav-cta">Hablemos</a>
+    <a href="#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════
      MAIN CONTENT (HOME)
@@ -67,7 +85,7 @@
       <span class="line"><span>RUBÉN</span></span>
       <span class="line"><span class="stroke-text">ERI</span><span class="accent">MO.</span></span>
     </h1>
-    <p class="hero-phrase">Donde la luz habla, mi lente escucha.</p>
+    <p class="hero-phrase" data-es="Donde la luz habla, mi lente escucha." data-en="Where light speaks, my lens listens.">Donde la luz habla, mi lente escucha.</p>
   </div>
 
   <div class="hero-dots" id="heroDots">
@@ -102,94 +120,67 @@
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="section-about" id="about">
-  <div class="about-visual reveal">
-    <div class="about-watermark">RE</div>
-    <div class="about-img-main">
-      <img src="img/Rhadi/_DSC0175_1.JPG" alt="Rubén Erimo">
-    </div>
-    <div class="about-img-float">
-      <img src="img/Brandy/_DSC1172.JPG" alt="Detalle sesión">
-    </div>
-  </div>
-  <div class="about-content reveal">
-    <div class="section-label">Nosotros</div>
-    <h2 class="about-heading">CREANDO <span class="italic">visión</span><br>SIN LÍMITES</h2>
-    <p class="about-text">
-      Soy Rubén Erimo, fotógrafo y creador visual. Mi cámara no solo captura imágenes —
-      congela emociones, cuenta historias y transforma instantes en recuerdos eternos.
-      Cada proyecto es una colaboración, cada disparo una declaración de intenciones.
-    </p>
-    <div class="about-stats">
-      <div><div class="stat-num">150+</div><div class="stat-txt">Proyectos</div></div>
-      <div><div class="stat-num">5+</div><div class="stat-txt">Años</div></div>
-      <div><div class="stat-num">∞</div><div class="stat-txt">Visión</div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════════════════════
      TRABAJOS — CATEGORIES
 ═══════════════════════════════════ -->
 <section class="section-trabajos" id="trabajos">
   <div class="trabajos-header reveal">
-    <div class="section-label">Portafolio</div>
-    <h2 class="trabajos-heading">TRABAJOS</h2>
+    <div class="section-label" data-es="Portafolio" data-en="Portfolio">Portafolio</div>
+    <h2 class="trabajos-heading" data-es="TRABAJOS" data-en="WORK">TRABAJOS</h2>
   </div>
   <div class="trabajos-grid reveal-stagger">
 
     <!-- TBC MAG — tall left -->
     <div class="trabajo-card tall" onclick="location.href='tbc-mag.html'">
-      <img src="img/Brandy/_DSC1121.JPG" alt="TBC MAG">
+      <img src="img/Brandy/_DSC1121.JPG" alt="TBC MAG" loading="lazy">
       <div class="trabajo-overlay">
         <div class="trabajo-num">01</div>
         <div class="trabajo-title">TBC MAG</div>
-        <div class="trabajo-desc">Editorial visual, portadas y contenido para la revista.</div>
+        <div class="trabajo-desc" data-es="Editorial visual, portadas y contenido para la revista." data-en="Visual editorial, covers and content for the magazine.">Editorial visual, portadas y contenido para la revista.</div>
       </div>
       <div class="trabajo-arrow">→</div>
     </div>
 
     <!-- ESTUDIO -->
     <div class="trabajo-card" onclick="location.href='estudio.html'">
-      <img src="img/fati/_IMG5869.JPG" alt="Estudio">
+      <img src="img/fati/_IMG5869.JPG" alt="Estudio" loading="lazy">
       <div class="trabajo-overlay">
         <div class="trabajo-num">02</div>
-        <div class="trabajo-title">ESTUDIO</div>
-        <div class="trabajo-desc">Sesiones controladas, iluminación precisa.</div>
+        <div class="trabajo-title" data-es="ESTUDIO" data-en="STUDIO">ESTUDIO</div>
+        <div class="trabajo-desc" data-es="Sesiones controladas, iluminación precisa." data-en="Controlled sessions, precise lighting.">Sesiones controladas, iluminación precisa.</div>
       </div>
       <div class="trabajo-arrow">→</div>
     </div>
 
     <!-- EVENTOS -->
     <div class="trabajo-card" onclick="location.href='eventos.html'">
-      <img src="img/OyK/_DSC7702_1.JPG" alt="Eventos">
+      <img src="img/OyK/_DSC7702_1.JPG" alt="Eventos" loading="lazy">
       <div class="trabajo-overlay">
         <div class="trabajo-num">03</div>
-        <div class="trabajo-title">EVENTOS</div>
-        <div class="trabajo-desc">La energía del momento, capturada para siempre.</div>
+        <div class="trabajo-title" data-es="EVENTOS" data-en="EVENTS">EVENTOS</div>
+        <div class="trabajo-desc" data-es="La energía del momento, capturada para siempre." data-en="The energy of the moment, captured forever.">La energía del momento, capturada para siempre.</div>
       </div>
       <div class="trabajo-arrow">→</div>
     </div>
 
     <!-- LIFESTYLE -->
     <div class="trabajo-card" onclick="location.href='lifestyle.html'">
-      <img src="img/ansy/DSC_0065.JPG" alt="Lifestyle">
+      <img src="img/ansy/DSC_0065.JPG" alt="Lifestyle" loading="lazy">
       <div class="trabajo-overlay">
         <div class="trabajo-num">04</div>
         <div class="trabajo-title">LIFESTYLE</div>
-        <div class="trabajo-desc">Lo cotidiano elevado a arte visual.</div>
+        <div class="trabajo-desc" data-es="Lo cotidiano elevado a arte visual." data-en="The everyday elevated to visual art.">Lo cotidiano elevado a arte visual.</div>
       </div>
       <div class="trabajo-arrow">→</div>
     </div>
 
     <!-- VISUALS — tall right -->
     <div class="trabajo-card tall" onclick="location.href='visuals.html'">
-      <img src="img/seng/IMG_2329.JPG" alt="Visuals">
+      <img src="img/seng/IMG_2329.JPG" alt="Visuals" loading="lazy">
       <div class="trabajo-overlay">
         <div class="trabajo-num">05</div>
         <div class="trabajo-title">VISUALS</div>
-        <div class="trabajo-desc">Video, motion y piezas audiovisuales.</div>
+        <div class="trabajo-desc" data-es="Video, motion y piezas audiovisuales." data-en="Video, motion and audiovisual pieces.">Video, motion y piezas audiovisuales.</div>
       </div>
       <div class="trabajo-arrow">→</div>
     </div>
@@ -197,57 +188,23 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section-services" id="services">
-  <div class="services-inner">
-    <div class="reveal" style="margin-bottom:60px;">
-      <div class="section-label">Servicios</div>
-      <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);text-transform:uppercase;">Lo que <span style="font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)">ofrezco</span></h2>
-    </div>
-    <div class="service-row reveal" onclick="location.href='fotografia.html'" data-img="img/Brandy/_DSC1110.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">01</div><div class="srv-title">FOTOGRAFÍA</div>
-      <div class="srv-desc">Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten.</div>
-      <div class="srv-arrow">→</div>
-    </div>
-    <div class="service-row reveal" onclick="location.href='video.html'" data-img="img/Rema/_DSC5759.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">02</div><div class="srv-title">VIDEO</div>
-      <div class="srv-desc">Producción audiovisual de principio a fin. Historias que cobran vida en movimiento.</div>
-      <div class="srv-arrow">→</div>
-    </div>
-    <div class="service-row reveal" onclick="location.href='contenido-creativo.html'" data-img="img/ansy/DSC_0408.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">03</div><div class="srv-title">CONTENIDO CREATIVO</div>
-      <div class="srv-desc">Estrategia visual para redes y plataformas. Contenido que conecta y transforma.</div>
-      <div class="srv-arrow">→</div>
-    </div>
-    <div class="service-row reveal" onclick="location.href='direccion-de-arte.html'" data-img="img/OyK/_DSC7933.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">04</div><div class="srv-title">DIRECCIÓN DE ARTE</div>
-      <div class="srv-desc">Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel.</div>
-      <div class="srv-arrow">→</div>
-    </div>
-  </div>
-</section>
-
 <!-- IMAGE STRIP -->
 <div class="img-strip">
-  <div class="strip-img"><img src="img/Rema/_DSC5134.JPG" alt="Rema"></div>
-  <div class="strip-img"><img src="img/Rhadi/_DSC0085.jpg" alt="Rhadi"></div>
-  <div class="strip-img"><img src="img/Brandy/_DSC1168.JPG" alt="Brandy"></div>
-  <div class="strip-img"><img src="img/seng/IMG_2237.JPG" alt="Seng"></div>
+  <div class="strip-img"><img src="img/Rema/_DSC5134.JPG" alt="Rema" loading="lazy"></div>
+  <div class="strip-img"><img src="img/Rhadi/_DSC0085.jpg" alt="Rhadi" loading="lazy"></div>
+  <div class="strip-img"><img src="img/Brandy/_DSC1168.JPG" alt="Brandy" loading="lazy"></div>
+  <div class="strip-img"><img src="img/seng/IMG_2237.JPG" alt="Seng" loading="lazy"></div>
 </div>
 
 <!-- CTA -->
 <section class="section-cta" id="contact">
   <div class="cta-bg-text">RE</div>
   <div class="cta-content reveal">
-    <div class="section-label" style="justify-content:center">Contacto</div>
-    <h2 class="cta-heading">¿LISTO PARA<br>CREAR <span class="italic">algo épico</span>?</h2>
-    <p class="cta-sub">Cuéntame tu idea. Yo la convierto en imagen.</p>
+    <div class="section-label" style="justify-content:center" data-es="Contacto" data-en="Contact">Contacto</div>
+    <h2 class="cta-heading" data-es-html="¿LISTO PARA<br>CREAR <span class='italic'>algo épico</span>?" data-en-html="READY TO<br>CREATE <span class='italic'>something epic</span>?">¿LISTO PARA<br>CREAR <span class="italic">algo épico</span>?</h2>
+    <p class="cta-sub" data-es="Cuéntame tu idea. Yo la convierto en imagen." data-en="Tell me your idea. I'll turn it into an image.">Cuéntame tu idea. Yo la convierto en imagen.</p>
     <a href="tel:+14704451477" class="cta-btn">
-      <span>Hablemos
+      <span data-es="Hablemos" data-en="Let's talk">Hablemos
         <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
@@ -264,8 +221,8 @@
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="#trabajos">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Arriba ↑</a>
+    <a href="#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
   </div>
 </footer>
 

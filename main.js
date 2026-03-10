@@ -7,9 +7,16 @@ if (loader) {
 }
 
 // ═══════════ NAV SCROLL ═══════════
+let scrollTicking = false;
 window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', scrollY > 60);
-});
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      document.getElementById('mainNav').classList.toggle('scrolled', scrollY > 60);
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
+}, { passive: true });
 
 // ═══════════ CAROUSEL ═══════════
 const slides = document.querySelectorAll('.hero-slide');
@@ -40,7 +47,7 @@ if (slides.length) {
   });
   let tx = 0;
   const hero = document.querySelector('.hero');
-  hero.addEventListener('touchstart', e => tx = e.touches[0].clientX);
+  hero.addEventListener('touchstart', e => tx = e.touches[0].clientX, { passive: true });
   hero.addEventListener('touchend', e => {
     const d = tx - e.changedTouches[0].clientX;
     if (Math.abs(d) > 50) { d > 0 ? nextSlide() : goSlide((cur - 1 + slides.length) % slides.length); resetAuto(); }
@@ -74,16 +81,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // ═══════════ PARALLAX STRIP ═══════════
 const strip = document.querySelector('.img-strip');
 if (strip) {
+  const stripImgs = strip.querySelectorAll('.strip-img img');
+  let stripTicking = false;
   window.addEventListener('scroll', () => {
-    const rect = strip.getBoundingClientRect();
-    if (rect.top < innerHeight && rect.bottom > 0) {
-      const p = (innerHeight - rect.top) / (innerHeight + rect.height);
-      const off = (p - 0.5) * 80;
-      strip.querySelectorAll('.strip-img img').forEach((img, i) => {
-        img.style.transform = `translateY(${off * (i % 2 === 0 ? 0.4 : -0.4)}px)`;
+    if (!stripTicking) {
+      requestAnimationFrame(() => {
+        const rect = strip.getBoundingClientRect();
+        if (rect.top < innerHeight && rect.bottom > 0) {
+          const p = (innerHeight - rect.top) / (innerHeight + rect.height);
+          const off = (p - 0.5) * 80;
+          stripImgs.forEach((img, i) => {
+            img.style.transform = `translateY(${off * (i % 2 === 0 ? 0.4 : -0.4)}px)`;
+          });
+        }
+        stripTicking = false;
       });
+      stripTicking = true;
     }
-  });
+  }, { passive: true });
 }
 
 // ═══════════ LIGHTBOX ═══════════
@@ -130,6 +145,61 @@ if (lightbox) {
   });
 }
 
+// ═══════════ THEME TOGGLE ═══════════
+function toggleTheme() {
+  const isLight = document.body.classList.toggle('light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  updateThemeBtn();
+}
+function updateThemeBtn() {
+  const isLight = document.body.classList.contains('light');
+  document.querySelectorAll('#themeToggle').forEach(b => b.textContent = isLight ? 'Dark' : 'Light');
+}
+if (localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+updateThemeBtn();
+
+// ═══════════ LANGUAGE TOGGLE ═══════════
+let currentLang = localStorage.getItem('lang') || 'es';
+
+function toggleLang() {
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  localStorage.setItem('lang', currentLang);
+  applyLang();
+}
+function applyLang() {
+  document.querySelectorAll('[data-es]').forEach(el => {
+    const text = el.getAttribute('data-' + currentLang);
+    if (text) {
+      const svg = el.querySelector('svg');
+      if (svg) { el.textContent = text + ' '; el.appendChild(svg); }
+      else el.textContent = text;
+    }
+  });
+  document.querySelectorAll('[data-es-html]').forEach(el => {
+    const html = el.getAttribute('data-' + currentLang + '-html');
+    if (html) el.innerHTML = html;
+  });
+  document.querySelectorAll('#langToggle').forEach(b => b.textContent = currentLang === 'es' ? 'EN' : 'ES');
+  document.documentElement.lang = currentLang;
+}
+if (currentLang !== 'es') applyLang();
+
+// ═══════════ MOBILE MENU ═══════════
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburger');
+  if (menu && btn) {
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+}
+function closeMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburger');
+  if (menu) { menu.classList.remove('open'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+}
+
 // ═══════════ CUSTOM CURSOR ═══════════
 const cursorEl = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
@@ -138,17 +208,14 @@ const cursorLabel = document.getElementById('cursorLabel');
 if (cursorEl && window.matchMedia('(pointer:fine)').matches) {
   let mx = 0, my = 0, cx = 0, cy = 0;
 
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
 
   (function moveCursor() {
     cx += (mx - cx) * 0.15;
     cy += (my - cy) * 0.15;
-    cursorEl.style.left = cx + 'px';
-    cursorEl.style.top = cy + 'px';
-    cursorDot.style.left = mx + 'px';
-    cursorDot.style.top = my + 'px';
-    cursorLabel.style.left = mx + 'px';
-    cursorLabel.style.top = (my + 40) + 'px';
+    cursorEl.style.transform = `translate(${cx - 8}px, ${cy - 8}px)`;
+    cursorDot.style.transform = `translate(${mx - 2}px, ${my - 2}px)`;
+    cursorLabel.style.transform = `translate(${mx}px, ${my + 40}px)`;
     requestAnimationFrame(moveCursor);
   })();
 

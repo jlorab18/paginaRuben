@@ -25,32 +25,50 @@
     <span class="nav-name">Rubén Erimo</span>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html#trabajos">Trabajos</a></li>
-    <li><a href="index.html#about">Nosotros</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta">Hablemos</a>
+    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
 
 <!-- CONTENT -->
 <div class="service-page">
-  <a href="index.html#services" class="subpage-back">← Volver a servicios</a>
+  <a href="nosotros.html#services" class="subpage-back" data-es="← Volver a servicios" data-en="← Back to services">← Volver a servicios</a>
 
   <div class="service-page-header">
-    <div class="section-label">Servicio</div>
+    <div class="section-label" data-es="Servicio" data-en="Service">Servicio</div>
     <h1 class="service-page-title">CONTENIDO CREATIVO</h1>
-    <p class="service-page-subtitle">Estrategia visual para redes y plataformas. Contenido que conecta y transforma.</p>
+    <p class="service-page-subtitle" data-es="Estrategia visual para redes y plataformas. Contenido que conecta y transforma." data-en="Visual strategy for social media and platforms. Content that connects and transforms.">Estrategia visual para redes y plataformas. Contenido que conecta y transforma.</p>
   </div>
 
   <div class="service-page-body">
     <div class="service-page-text">
-      <h2 class="service-section-heading">Contenido que <span class="italic">conecta</span></h2>
-      <p>En un mundo saturado de imágenes, destacar requiere más que una buena foto. Necesitas una estrategia visual coherente, un lenguaje propio y contenido que hable directamente a tu audiencia.</p>
-      <p>Creo contenido visual integral para marcas y creadores: desde la conceptualización y la sesión de fotos hasta la edición final adaptada a cada plataforma. Instagram, TikTok, YouTube — cada formato tiene sus reglas y yo las domino.</p>
+      <h2 class="service-section-heading" data-es-html="Contenido que <span class='italic'>conecta</span>" data-en-html="Content that <span class='italic'>connects</span>">Contenido que <span class="italic">conecta</span></h2>
+      <p data-es="En un mundo saturado de imágenes, destacar requiere más que una buena foto. Necesitas una estrategia visual coherente, un lenguaje propio y contenido que hable directamente a tu audiencia." data-en="In a world saturated with images, standing out requires more than a good photo. You need a coherent visual strategy, a unique language and content that speaks directly to your audience.">En un mundo saturado de imágenes, destacar requiere más que una buena foto. Necesitas una estrategia visual coherente, un lenguaje propio y contenido que hable directamente a tu audiencia.</p>
+      <p data-es="Creo contenido visual integral para marcas y creadores: desde la conceptualización y la sesión de fotos hasta la edición final adaptada a cada plataforma. Instagram, TikTok, YouTube — cada formato tiene sus reglas y yo las domino." data-en="I create comprehensive visual content for brands and creators: from conceptualization and photo sessions to the final edit adapted to each platform. Instagram, TikTok, YouTube — every format has its rules and I master them all.">Creo contenido visual integral para marcas y creadores: desde la conceptualización y la sesión de fotos hasta la edición final adaptada a cada plataforma. Instagram, TikTok, YouTube — cada formato tiene sus reglas y yo las domino.</p>
     </div>
 
     <div class="service-page-image">
@@ -61,28 +79,28 @@
   <div class="service-features">
     <div class="service-feature">
       <div class="feature-num">01</div>
-      <h3 class="feature-title">Redes sociales</h3>
-      <p class="feature-desc">Contenido optimizado para Instagram, TikTok y YouTube. Fotos, reels, stories y carruseles con identidad visual definida.</p>
+      <h3 class="feature-title" data-es="Redes sociales" data-en="Social media">Redes sociales</h3>
+      <p class="feature-desc" data-es="Contenido optimizado para Instagram, TikTok y YouTube. Fotos, reels, stories y carruseles con identidad visual definida." data-en="Optimized content for Instagram, TikTok and YouTube. Photos, reels, stories and carousels with a defined visual identity.">Contenido optimizado para Instagram, TikTok y YouTube. Fotos, reels, stories y carruseles con identidad visual definida.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">02</div>
-      <h3 class="feature-title">Branding visual</h3>
-      <p class="feature-desc">Desarrollo de identidad visual para tu marca personal o empresa. Moodboards, paletas, estilo fotográfico consistente.</p>
+      <h3 class="feature-title" data-es="Branding visual" data-en="Visual branding">Branding visual</h3>
+      <p class="feature-desc" data-es="Desarrollo de identidad visual para tu marca personal o empresa. Moodboards, paletas, estilo fotográfico consistente." data-en="Visual identity development for your personal brand or company. Moodboards, palettes, consistent photographic style.">Desarrollo de identidad visual para tu marca personal o empresa. Moodboards, paletas, estilo fotográfico consistente.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">03</div>
-      <h3 class="feature-title">Packs de contenido</h3>
-      <p class="feature-desc">Sesiones planificadas para generar contenido para semanas o meses. Maximiza tu inversión con batches creativos.</p>
+      <h3 class="feature-title" data-es="Packs de contenido" data-en="Content packs">Packs de contenido</h3>
+      <p class="feature-desc" data-es="Sesiones planificadas para generar contenido para semanas o meses. Maximiza tu inversión con batches creativos." data-en="Planned sessions to generate content for weeks or months. Maximize your investment with creative batches.">Sesiones planificadas para generar contenido para semanas o meses. Maximiza tu inversión con batches creativos.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">04</div>
-      <h3 class="feature-title">UGC y colaboraciones</h3>
-      <p class="feature-desc">Contenido auténtico estilo creator para marcas que buscan conectar de forma orgánica con su audiencia.</p>
+      <h3 class="feature-title" data-es="UGC y colaboraciones" data-en="UGC & collaborations">UGC y colaboraciones</h3>
+      <p class="feature-desc" data-es="Contenido auténtico estilo creator para marcas que buscan conectar de forma orgánica con su audiencia." data-en="Authentic creator-style content for brands looking to connect organically with their audience.">Contenido auténtico estilo creator para marcas que buscan conectar de forma orgánica con su audiencia.</p>
     </div>
   </div>
 
   <div class="service-gallery">
-    <h2 class="service-section-heading" style="margin-bottom:40px;">Contenido <span class="italic">en acción</span></h2>
+    <h2 class="service-section-heading" style="margin-bottom:40px;" data-es-html="Contenido <span class='italic'>en acción</span>" data-en-html="Content <span class='italic'>in action</span>">Contenido <span class="italic">en acción</span></h2>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/ansy/DSC_0065.JPG" alt="Contenido — Ansy" loading="lazy"></div>
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Brandy/_DSC1168.JPG" alt="Contenido — Brandy" loading="lazy"></div>
@@ -94,9 +112,9 @@
   </div>
 
   <div class="service-cta">
-    <h2 class="service-section-heading">¿Tu marca necesita <span class="italic">contenido</span>?</h2>
-    <p>Vamos a crear una estrategia visual que haga crecer tu presencia.</p>
-    <a href="index.html#contact" class="cta-btn"><span>Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <h2 class="service-section-heading" data-es-html="¿Tu marca necesita <span class='italic'>contenido</span>?" data-en-html="Does your brand need <span class='italic'>content</span>?">¿Tu marca necesita <span class="italic">contenido</span>?</h2>
+    <p data-es="Vamos a crear una estrategia visual que haga crecer tu presencia." data-en="Let's create a visual strategy that grows your presence.">Vamos a crear una estrategia visual que haga crecer tu presencia.</p>
+    <a href="index.html#contact" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </div>
 
@@ -105,8 +123,8 @@
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="index.html#trabajos">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Arriba ↑</a>
+    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
   </div>
 </footer>
 

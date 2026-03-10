@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — Rubén Erimo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-label" id="cursorLabel"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo" onclick="location.href='index.html'">
+    <div class="re-logo">
+      <div class="sq sq1">R</div><div class="sq sq2"></div>
+      <div class="sq sq3"></div><div class="sq sq4">E</div>
+    </div>
+    <span class="nav-name">Rubén Erimo</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
+    <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
+    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section-about" id="about" style="padding-top:140px;">
+  <div class="about-visual reveal">
+    <div class="about-watermark">RE</div>
+    <div class="about-img-main">
+      <img src="img/Rhadi/_DSC0175_1.JPG" alt="Rubén Erimo">
+    </div>
+    <div class="about-img-float">
+      <img src="img/Brandy/_DSC1172.JPG" alt="Detalle sesión">
+    </div>
+  </div>
+  <div class="about-content reveal">
+    <div class="section-label" data-es="Nosotros" data-en="About us">Nosotros</div>
+    <h2 class="about-heading" data-es-html="CREANDO <span class='italic'>visión</span><br>SIN LÍMITES" data-en-html="CREATING <span class='italic'>vision</span><br>WITHOUT LIMITS">CREANDO <span class="italic">visión</span><br>SIN LÍMITES</h2>
+    <p class="about-text" data-es="Soy Rubén Erimo, fotógrafo y creador visual. Mi cámara no solo captura imágenes — congela emociones, cuenta historias y transforma instantes en recuerdos eternos. Cada proyecto es una colaboración, cada disparo una declaración de intenciones." data-en="I'm Rubén Erimo, photographer and visual creator. My camera doesn't just capture images — it freezes emotions, tells stories and transforms moments into eternal memories. Every project is a collaboration, every shot a statement of intent.">
+      Soy Rubén Erimo, fotógrafo y creador visual. Mi cámara no solo captura imágenes —
+      congela emociones, cuenta historias y transforma instantes en recuerdos eternos.
+      Cada proyecto es una colaboración, cada disparo una declaración de intenciones.
+    </p>
+    <div class="about-stats">
+      <div><div class="stat-num">150+</div><div class="stat-txt" data-es="Proyectos" data-en="Projects">Proyectos</div></div>
+      <div><div class="stat-num">5+</div><div class="stat-txt" data-es="Años" data-en="Years">Años</div></div>
+      <div><div class="stat-num">∞</div><div class="stat-txt" data-es="Visión" data-en="Vision">Visión</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section-services" id="services">
+  <div class="services-inner">
+    <div class="reveal" style="margin-bottom:60px;">
+      <div class="section-label" data-es="Servicios" data-en="Services">Servicios</div>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);text-transform:uppercase;" data-es-html="Lo que <span style='font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)'>ofrezco</span>" data-en-html="What I <span style='font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)'>offer</span>">Lo que <span style="font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)">ofrezco</span></h2>
+    </div>
+    <div class="service-row reveal" onclick="location.href='fotografia.html'" data-img="img/Brandy/_DSC1110.JPG">
+      <div class="srv-bg"></div>
+      <div class="srv-num">01</div><div class="srv-title">FOTOGRAFÍA</div>
+      <div class="srv-desc" data-es="Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten." data-en="Events, portraits, product, editorial. Images that aren't just seen — they're felt.">Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten.</div>
+      <div class="srv-arrow">→</div>
+    </div>
+    <div class="service-row reveal" onclick="location.href='video.html'" data-img="img/Rema/_DSC5759.JPG">
+      <div class="srv-bg"></div>
+      <div class="srv-num">02</div><div class="srv-title">VIDEO</div>
+      <div class="srv-desc" data-es="Producción audiovisual de principio a fin. Historias que cobran vida en movimiento." data-en="Audiovisual production from start to finish. Stories that come alive in motion.">Producción audiovisual de principio a fin. Historias que cobran vida en movimiento.</div>
+      <div class="srv-arrow">→</div>
+    </div>
+    <div class="service-row reveal" onclick="location.href='contenido-creativo.html'" data-img="img/ansy/DSC_0408.JPG">
+      <div class="srv-bg"></div>
+      <div class="srv-num">03</div><div class="srv-title">CONTENIDO CREATIVO</div>
+      <div class="srv-desc" data-es="Estrategia visual para redes y plataformas. Contenido que conecta y transforma." data-en="Visual strategy for social media and platforms. Content that connects and transforms.">Estrategia visual para redes y plataformas. Contenido que conecta y transforma.</div>
+      <div class="srv-arrow">→</div>
+    </div>
+    <div class="service-row reveal" onclick="location.href='direccion-de-arte.html'" data-img="img/OyK/_DSC7933.JPG">
+      <div class="srv-bg"></div>
+      <div class="srv-num">04</div><div class="srv-title">DIRECCIÓN DE ARTE</div>
+      <div class="srv-desc" data-es="Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel." data-en="Concept, style and creative vision to take your project to the next level.">Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel.</div>
+      <div class="srv-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
+  <div class="footer-right">
+    <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
+    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

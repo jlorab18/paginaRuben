@@ -25,32 +25,50 @@
     <span class="nav-name">Rubén Erimo</span>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html#trabajos">Trabajos</a></li>
-    <li><a href="index.html#about">Nosotros</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta">Hablemos</a>
+    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
 
 <!-- CONTENT -->
 <div class="service-page">
-  <a href="index.html#services" class="subpage-back">← Volver a servicios</a>
+  <a href="nosotros.html#services" class="subpage-back" data-es="← Volver a servicios" data-en="← Back to services">← Volver a servicios</a>
 
   <div class="service-page-header">
-    <div class="section-label">Servicio</div>
+    <div class="section-label" data-es="Servicio" data-en="Service">Servicio</div>
     <h1 class="service-page-title">VIDEO</h1>
-    <p class="service-page-subtitle">Producción audiovisual de principio a fin. Historias que cobran vida en movimiento.</p>
+    <p class="service-page-subtitle" data-es="Producción audiovisual de principio a fin. Historias que cobran vida en movimiento." data-en="Audiovisual production from start to finish. Stories that come alive in motion.">Producción audiovisual de principio a fin. Historias que cobran vida en movimiento.</p>
   </div>
 
   <div class="service-page-body">
     <div class="service-page-text">
-      <h2 class="service-section-heading">Historias en <span class="italic">movimiento</span></h2>
-      <p>El video tiene el poder de transmitir lo que una imagen fija no puede. El ritmo, la música, la transición entre momentos — todo se combina para crear una experiencia emocional completa.</p>
-      <p>Desde la preproducción hasta la entrega final, me encargo de cada etapa del proceso: concepto, grabación, edición, color grading y sonido. El resultado es una pieza que conecta con tu audiencia.</p>
+      <h2 class="service-section-heading" data-es-html="Historias en <span class='italic'>movimiento</span>" data-en-html="Stories in <span class='italic'>motion</span>">Historias en <span class="italic">movimiento</span></h2>
+      <p data-es="El video tiene el poder de transmitir lo que una imagen fija no puede. El ritmo, la música, la transición entre momentos — todo se combina para crear una experiencia emocional completa." data-en="Video has the power to convey what a still image cannot. The rhythm, the music, the transition between moments — everything combines to create a complete emotional experience.">El video tiene el poder de transmitir lo que una imagen fija no puede. El ritmo, la música, la transición entre momentos — todo se combina para crear una experiencia emocional completa.</p>
+      <p data-es="Desde la preproducción hasta la entrega final, me encargo de cada etapa del proceso: concepto, grabación, edición, color grading y sonido. El resultado es una pieza que conecta con tu audiencia." data-en="From preproduction to final delivery, I handle every stage of the process: concept, shooting, editing, color grading and sound. The result is a piece that connects with your audience.">Desde la preproducción hasta la entrega final, me encargo de cada etapa del proceso: concepto, grabación, edición, color grading y sonido. El resultado es una pieza que conecta con tu audiencia.</p>
     </div>
 
     <div class="service-page-image">
@@ -61,51 +79,51 @@
   <div class="service-features">
     <div class="service-feature">
       <div class="feature-num">01</div>
-      <h3 class="feature-title">Videoclips</h3>
-      <p class="feature-desc">Producción de videoclips musicales con narrativa visual, estética cuidada y edición profesional.</p>
+      <h3 class="feature-title" data-es="Videoclips" data-en="Music videos">Videoclips</h3>
+      <p class="feature-desc" data-es="Producción de videoclips musicales con narrativa visual, estética cuidada y edición profesional." data-en="Music video production with visual narrative, refined aesthetics and professional editing.">Producción de videoclips musicales con narrativa visual, estética cuidada y edición profesional.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">02</div>
-      <h3 class="feature-title">Aftermovies</h3>
-      <p class="feature-desc">Resúmenes de eventos que capturan la esencia y la energía del momento en piezas dinámicas.</p>
+      <h3 class="feature-title" data-es="Aftermovies" data-en="Aftermovies">Aftermovies</h3>
+      <p class="feature-desc" data-es="Resúmenes de eventos que capturan la esencia y la energía del momento en piezas dinámicas." data-en="Event recaps that capture the essence and energy of the moment in dynamic pieces.">Resúmenes de eventos que capturan la esencia y la energía del momento en piezas dinámicas.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">03</div>
-      <h3 class="feature-title">Spots publicitarios</h3>
-      <p class="feature-desc">Piezas cortas y efectivas para campañas digitales, redes sociales y plataformas de streaming.</p>
+      <h3 class="feature-title" data-es="Spots publicitarios" data-en="Commercial spots">Spots publicitarios</h3>
+      <p class="feature-desc" data-es="Piezas cortas y efectivas para campañas digitales, redes sociales y plataformas de streaming." data-en="Short and effective pieces for digital campaigns, social media and streaming platforms.">Piezas cortas y efectivas para campañas digitales, redes sociales y plataformas de streaming.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">04</div>
-      <h3 class="feature-title">Documentales</h3>
-      <p class="feature-desc">Narrativas largas que profundizan en historias, marcas o personas con un enfoque cinematográfico.</p>
+      <h3 class="feature-title" data-es="Documentales" data-en="Documentaries">Documentales</h3>
+      <p class="feature-desc" data-es="Narrativas largas que profundizan en historias, marcas o personas con un enfoque cinematográfico." data-en="Long-form narratives that delve into stories, brands or people with a cinematic approach.">Narrativas largas que profundizan en historias, marcas o personas con un enfoque cinematográfico.</p>
     </div>
   </div>
 
   <div class="service-process">
-    <h2 class="service-section-heading">El <span class="italic">proceso</span></h2>
+    <h2 class="service-section-heading" data-es-html="El <span class='italic'>proceso</span>" data-en-html="The <span class='italic'>process</span>">El <span class="italic">proceso</span></h2>
     <div class="process-steps">
       <div class="process-step">
         <div class="step-num">01</div>
-        <h3>Preproducción</h3>
-        <p>Concepto, guión, storyboard, localización y planificación de rodaje.</p>
+        <h3 data-es="Preproducción" data-en="Preproduction">Preproducción</h3>
+        <p data-es="Concepto, guión, storyboard, localización y planificación de rodaje." data-en="Concept, script, storyboard, location scouting and shooting planning.">Concepto, guión, storyboard, localización y planificación de rodaje.</p>
       </div>
       <div class="process-step">
         <div class="step-num">02</div>
-        <h3>Rodaje</h3>
-        <p>Grabación con equipo profesional, dirección de escena y captura de audio.</p>
+        <h3 data-es="Rodaje" data-en="Shooting">Rodaje</h3>
+        <p data-es="Grabación con equipo profesional, dirección de escena y captura de audio." data-en="Recording with professional equipment, scene direction and audio capture.">Grabación con equipo profesional, dirección de escena y captura de audio.</p>
       </div>
       <div class="process-step">
         <div class="step-num">03</div>
-        <h3>Postproducción</h3>
-        <p>Edición, color grading, diseño de sonido, motion graphics y entrega final.</p>
+        <h3 data-es="Postproducción" data-en="Postproduction">Postproducción</h3>
+        <p data-es="Edición, color grading, diseño de sonido, motion graphics y entrega final." data-en="Editing, color grading, sound design, motion graphics and final delivery.">Edición, color grading, diseño de sonido, motion graphics y entrega final.</p>
       </div>
     </div>
   </div>
 
   <div class="service-cta">
-    <h2 class="service-section-heading">¿Tienes un proyecto <span class="italic">audiovisual</span>?</h2>
-    <p>Hablemos sobre tu visión y hagamos que cobre vida.</p>
-    <a href="index.html#contact" class="cta-btn"><span>Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <h2 class="service-section-heading" data-es-html="¿Tienes un proyecto <span class='italic'>audiovisual</span>?" data-en-html="Have an <span class='italic'>audiovisual</span> project?">¿Tienes un proyecto <span class="italic">audiovisual</span>?</h2>
+    <p data-es="Hablemos sobre tu visión y hagamos que cobre vida." data-en="Let's talk about your vision and bring it to life.">Hablemos sobre tu visión y hagamos que cobre vida.</p>
+    <a href="index.html#contact" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </div>
 
@@ -114,8 +132,8 @@
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="index.html#trabajos">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Arriba ↑</a>
+    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
   </div>
 </footer>
 

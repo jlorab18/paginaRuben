@@ -25,32 +25,50 @@
     <span class="nav-name">Rubén Erimo</span>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html#trabajos">Trabajos</a></li>
-    <li><a href="index.html#about">Nosotros</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
+    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-toggles">
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta">Hablemos</a>
+    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
+  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
+  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <div class="mobile-toggles">
+    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+  </div>
+</div>
 
 <!-- CONTENT -->
 <div class="service-page">
-  <a href="index.html#services" class="subpage-back">← Volver a servicios</a>
+  <a href="nosotros.html#services" class="subpage-back" data-es="← Volver a servicios" data-en="← Back to services">← Volver a servicios</a>
 
   <div class="service-page-header">
-    <div class="section-label">Servicio</div>
+    <div class="section-label" data-es="Servicio" data-en="Service">Servicio</div>
     <h1 class="service-page-title">DIRECCIÓN DE ARTE</h1>
-    <p class="service-page-subtitle">Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel.</p>
+    <p class="service-page-subtitle" data-es="Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel." data-en="Concept, style and creative vision to take your project to the next level.">Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel.</p>
   </div>
 
   <div class="service-page-body">
     <div class="service-page-text">
-      <h2 class="service-section-heading">La visión <span class="italic">detrás de todo</span></h2>
-      <p>La dirección de arte es el hilo invisible que conecta cada elemento visual de un proyecto. Es decidir qué colores, texturas, localizaciones y estilos cuentan mejor tu historia.</p>
-      <p>Trabajo codo a codo con marcas, artistas y equipos creativos para definir la identidad visual de cada proyecto — desde el moodboard inicial hasta la pieza final. Cada decisión estética tiene un propósito.</p>
+      <h2 class="service-section-heading" data-es-html="La visión <span class='italic'>detrás de todo</span>" data-en-html="The vision <span class='italic'>behind everything</span>">La visión <span class="italic">detrás de todo</span></h2>
+      <p data-es="La dirección de arte es el hilo invisible que conecta cada elemento visual de un proyecto. Es decidir qué colores, texturas, localizaciones y estilos cuentan mejor tu historia." data-en="Art direction is the invisible thread that connects every visual element of a project. It's about deciding which colors, textures, locations and styles best tell your story.">La dirección de arte es el hilo invisible que conecta cada elemento visual de un proyecto. Es decidir qué colores, texturas, localizaciones y estilos cuentan mejor tu historia.</p>
+      <p data-es="Trabajo codo a codo con marcas, artistas y equipos creativos para definir la identidad visual de cada proyecto — desde el moodboard inicial hasta la pieza final. Cada decisión estética tiene un propósito." data-en="I work side by side with brands, artists and creative teams to define the visual identity of each project — from the initial moodboard to the final piece. Every aesthetic decision has a purpose.">Trabajo codo a codo con marcas, artistas y equipos creativos para definir la identidad visual de cada proyecto — desde el moodboard inicial hasta la pieza final. Cada decisión estética tiene un propósito.</p>
     </div>
 
     <div class="service-page-image">
@@ -61,49 +79,49 @@
   <div class="service-features">
     <div class="service-feature">
       <div class="feature-num">01</div>
-      <h3 class="feature-title">Conceptualización</h3>
-      <p class="feature-desc">Desarrollo de concepto creativo, moodboards, referencias visuales y definición de estilo para tu proyecto.</p>
+      <h3 class="feature-title" data-es="Conceptualización" data-en="Conceptualization">Conceptualización</h3>
+      <p class="feature-desc" data-es="Desarrollo de concepto creativo, moodboards, referencias visuales y definición de estilo para tu proyecto." data-en="Creative concept development, moodboards, visual references and style definition for your project.">Desarrollo de concepto creativo, moodboards, referencias visuales y definición de estilo para tu proyecto.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">02</div>
-      <h3 class="feature-title">Dirección de sesión</h3>
-      <p class="feature-desc">Coordinación de equipo, dirección de modelos, selección de vestuario y supervisión de cada detalle en set.</p>
+      <h3 class="feature-title" data-es="Dirección de sesión" data-en="Session direction">Dirección de sesión</h3>
+      <p class="feature-desc" data-es="Coordinación de equipo, dirección de modelos, selección de vestuario y supervisión de cada detalle en set." data-en="Team coordination, model direction, wardrobe selection and supervision of every detail on set.">Coordinación de equipo, dirección de modelos, selección de vestuario y supervisión de cada detalle en set.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">03</div>
-      <h3 class="feature-title">Identidad de campaña</h3>
-      <p class="feature-desc">Creación de la línea visual completa para campañas publicitarias, lanzamientos y proyectos editoriales.</p>
+      <h3 class="feature-title" data-es="Identidad de campaña" data-en="Campaign identity">Identidad de campaña</h3>
+      <p class="feature-desc" data-es="Creación de la línea visual completa para campañas publicitarias, lanzamientos y proyectos editoriales." data-en="Creation of the complete visual line for advertising campaigns, launches and editorial projects.">Creación de la línea visual completa para campañas publicitarias, lanzamientos y proyectos editoriales.</p>
     </div>
     <div class="service-feature">
       <div class="feature-num">04</div>
-      <h3 class="feature-title">Consultoría creativa</h3>
-      <p class="feature-desc">Asesoramiento visual para marcas que buscan elevar su estética y diferenciarse en su sector.</p>
+      <h3 class="feature-title" data-es="Consultoría creativa" data-en="Creative consulting">Consultoría creativa</h3>
+      <p class="feature-desc" data-es="Asesoramiento visual para marcas que buscan elevar su estética y diferenciarse en su sector." data-en="Visual consulting for brands looking to elevate their aesthetics and stand out in their industry.">Asesoramiento visual para marcas que buscan elevar su estética y diferenciarse en su sector.</p>
     </div>
   </div>
 
   <div class="service-process">
-    <h2 class="service-section-heading">Cómo <span class="italic">trabajo</span></h2>
+    <h2 class="service-section-heading" data-es-html="Cómo <span class='italic'>trabajo</span>" data-en-html="How I <span class='italic'>work</span>">Cómo <span class="italic">trabajo</span></h2>
     <div class="process-steps">
       <div class="process-step">
         <div class="step-num">01</div>
-        <h3>Briefing</h3>
-        <p>Entender tu marca, tu audiencia y tus objetivos. Definir juntos la dirección del proyecto.</p>
+        <h3 data-es="Briefing" data-en="Briefing">Briefing</h3>
+        <p data-es="Entender tu marca, tu audiencia y tus objetivos. Definir juntos la dirección del proyecto." data-en="Understanding your brand, your audience and your goals. Defining the project direction together.">Entender tu marca, tu audiencia y tus objetivos. Definir juntos la dirección del proyecto.</p>
       </div>
       <div class="process-step">
         <div class="step-num">02</div>
-        <h3>Concepto</h3>
-        <p>Moodboards, paleta de color, referencias y propuesta visual detallada.</p>
+        <h3 data-es="Concepto" data-en="Concept">Concepto</h3>
+        <p data-es="Moodboards, paleta de color, referencias y propuesta visual detallada." data-en="Moodboards, color palette, references and detailed visual proposal.">Moodboards, paleta de color, referencias y propuesta visual detallada.</p>
       </div>
       <div class="process-step">
         <div class="step-num">03</div>
-        <h3>Ejecución</h3>
-        <p>Dirección en set, supervisión creativa y revisiones hasta el resultado perfecto.</p>
+        <h3 data-es="Ejecución" data-en="Execution">Ejecución</h3>
+        <p data-es="Dirección en set, supervisión creativa y revisiones hasta el resultado perfecto." data-en="On-set direction, creative supervision and revisions until the perfect result.">Dirección en set, supervisión creativa y revisiones hasta el resultado perfecto.</p>
       </div>
     </div>
   </div>
 
   <div class="service-gallery">
-    <h2 class="service-section-heading" style="margin-bottom:40px;">Proyectos <span class="italic">dirigidos</span></h2>
+    <h2 class="service-section-heading" style="margin-bottom:40px;" data-es-html="Proyectos <span class='italic'>dirigidos</span>" data-en-html="Directed <span class='italic'>projects</span>">Proyectos <span class="italic">dirigidos</span></h2>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Brandy/_DSC1172.JPG" alt="Dirección — Brandy" loading="lazy"></div>
       <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Rema/_DSC5914.JPG" alt="Dirección — Rema" loading="lazy"></div>
@@ -115,9 +133,9 @@
   </div>
 
   <div class="service-cta">
-    <h2 class="service-section-heading">¿Necesitas una <span class="italic">visión creativa</span>?</h2>
-    <p>Definamos juntos la estética de tu próximo proyecto.</p>
-    <a href="index.html#contact" class="cta-btn"><span>Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <h2 class="service-section-heading" data-es-html="¿Necesitas una <span class='italic'>visión creativa</span>?" data-en-html="Need a <span class='italic'>creative vision</span>?">¿Necesitas una <span class="italic">visión creativa</span>?</h2>
+    <p data-es="Definamos juntos la estética de tu próximo proyecto." data-en="Let's define the aesthetics of your next project together.">Definamos juntos la estética de tu próximo proyecto.</p>
+    <a href="index.html#contact" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </div>
 
@@ -126,8 +144,8 @@
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="index.html#trabajos">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Arriba ↑</a>
+    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
   </div>
 </footer>
 
