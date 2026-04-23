@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nosotros — Rubén Erimo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,16 +19,12 @@
 <!-- NAV -->
 <nav id="mainNav">
   <div class="nav-logo" onclick="location.href='index.html'">
-    <div class="re-logo">
-      <div class="sq sq1">R</div><div class="sq sq2"></div>
-      <div class="sq sq3"></div><div class="sq sq4">E</div>
-    </div>
-    <span class="nav-name">Rubén Erimo</span>
+    <img src="img/logos/IMG_9656.png" alt="Rubén Erimo" class="nav-logo-img" decoding="async" width="596" height="596">
   </div>
   <ul class="nav-links">
     <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
     <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
-    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-toggles">
@@ -35,7 +32,7 @@
       <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
     </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+    <a href="contacto.html" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
   <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -46,7 +43,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
   <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
-  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="contacto.html" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
   <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
   <div class="mobile-toggles">
     <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
@@ -54,70 +51,43 @@
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="section-about" id="about" style="padding-top:140px;">
-  <div class="about-visual reveal">
-    <div class="about-watermark">RE</div>
-    <div class="about-img-main">
-      <img src="img/Rhadi/_DSC0175_1.JPG" alt="Rubén Erimo">
-    </div>
-    <div class="about-img-float">
-      <img src="img/Brandy/_DSC1172.JPG" alt="Detalle sesión">
-    </div>
-  </div>
-  <div class="about-content reveal">
-    <div class="section-label" data-es="Nosotros" data-en="About us">Nosotros</div>
-    <h2 class="about-heading" data-es-html="CREANDO <span class='italic'>visión</span><br>SIN LÍMITES" data-en-html="CREATING <span class='italic'>vision</span><br>WITHOUT LIMITS">CREANDO <span class="italic">visión</span><br>SIN LÍMITES</h2>
-    <p class="about-text" data-es="Soy Rubén Erimo, fotógrafo y creador visual. Mi cámara no solo captura imágenes — congela emociones, cuenta historias y transforma instantes en recuerdos eternos. Cada proyecto es una colaboración, cada disparo una declaración de intenciones." data-en="I'm Rubén Erimo, photographer and visual creator. My camera doesn't just capture images — it freezes emotions, tells stories and transforms moments into eternal memories. Every project is a collaboration, every shot a statement of intent.">
-      Soy Rubén Erimo, fotógrafo y creador visual. Mi cámara no solo captura imágenes —
-      congela emociones, cuenta historias y transforma instantes en recuerdos eternos.
-      Cada proyecto es una colaboración, cada disparo una declaración de intenciones.
-    </p>
-    <div class="about-stats">
-      <div><div class="stat-num">150+</div><div class="stat-txt" data-es="Proyectos" data-en="Projects">Proyectos</div></div>
-      <div><div class="stat-num">5+</div><div class="stat-txt" data-es="Años" data-en="Years">Años</div></div>
-      <div><div class="stat-num">∞</div><div class="stat-txt" data-es="Visión" data-en="Vision">Visión</div></div>
-    </div>
-  </div>
-</section>
+<!-- SOBRE WTBC -->
+<section class="nosotros-section" id="services" style="padding-top:140px;">
+  <div class="nosotros-inner">
 
-<!-- SERVICES -->
-<section class="section-services" id="services">
-  <div class="services-inner">
-    <div class="reveal" style="margin-bottom:60px;">
-      <div class="section-label" data-es="Servicios" data-en="Services">Servicios</div>
-      <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);text-transform:uppercase;" data-es-html="Lo que <span style='font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)'>ofrezco</span>" data-en-html="What I <span style='font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)'>offer</span>">Lo que <span style="font-family:var(--font-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--blue)">ofrezco</span></h2>
+    <div class="nosotros-header reveal">
+      <div class="nosotros-num">02</div>
+      <h1 class="nosotros-heading" data-es-html="Sobre <strong>WeTheBestContent</strong>." data-en-html="About <strong>WeTheBestContent</strong>.">Sobre <strong>WeTheBestContent</strong>.</h1>
     </div>
-    <div class="service-row reveal" onclick="location.href='fotografia.html'" data-img="img/Brandy/_DSC1110.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">01</div><div class="srv-title">FOTOGRAFÍA</div>
-      <div class="srv-desc" data-es="Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten." data-en="Events, portraits, product, editorial. Images that aren't just seen — they're felt.">Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten.</div>
-      <div class="srv-arrow">→</div>
+
+    <div class="nosotros-text reveal">
+      <p data-es="WeTheBestContent es una plataforma audiovisual, donde cada proyecto se concibe como una pieza editorial. Fundada por Rubén Erimo, fotógrafo y filmmaker, la marca surge desde la necesidad de crear contenido con criterio, con intención y con una mirada clara, alejándose de lo superficial." data-en="WeTheBestContent is an audiovisual platform where every project is conceived as an editorial piece. Founded by Rubén Erimo, photographer and filmmaker, the brand arises from the need to create content with criteria, intention and a clear vision, moving away from the superficial.">WeTheBestContent es una plataforma audiovisual, donde cada proyecto se concibe como una pieza editorial. Fundada por Rubén Erimo, fotógrafo y filmmaker, la marca surge desde la necesidad de crear contenido con criterio, con intención y con una mirada clara, alejándose de lo superficial.</p>
+      <p data-es="WeTheBestContent no persigue tendencias ni fórmulas repetidas, sino proyectos que puedan sostenerse en el tiempo a través de una identidad visual sólida. El enfoque creativo se sitúa entre lo documental, lo editorial y lo cinematográfico. Personas reales, espacios reales y emociones reales son el punto de partida de cada proyecto." data-en="WeTheBestContent doesn't chase trends or repeated formulas, but projects that can sustain themselves over time through a solid visual identity. The creative approach sits between documentary, editorial and cinematographic. Real people, real spaces and real emotions are the starting point of every project.">WeTheBestContent no persigue tendencias ni fórmulas repetidas, sino proyectos que puedan sostenerse en el tiempo a través de una identidad visual sólida. El enfoque creativo se sitúa entre lo documental, lo editorial y lo cinematográfico. Personas reales, espacios reales y emociones reales son el punto de partida de cada proyecto.</p>
+      <p data-es="WeTheBestContent entiende la imagen como narrativa. Cada fotografía y cada plano forman parte de una historia mayor, pensada y construida desde el concepto hasta la edición final. No se trata solo de crear contenido, sino de traducir visualmente. Por eso, la marca trabaja con un número limitado de proyectos, priorizando la calidad y el compromiso creativo." data-en="WeTheBestContent understands image as narrative. Every photograph and every shot is part of a larger story, thought out and built from concept to final edit. It's not just about creating content, but about translating visually. That's why the brand works with a limited number of projects, prioritizing quality and creative commitment.">WeTheBestContent entiende la imagen como narrativa. Cada fotografía y cada plano forman parte de una historia mayor, pensada y construida desde el concepto hasta la edición final. No se trata solo de crear contenido, sino de traducir visualmente. Por eso, la marca trabaja con un número limitado de proyectos, priorizando la calidad y el compromiso creativo.</p>
+      <p class="nosotros-tagline" data-es="WeTheBestContent; Content that last." data-en="WeTheBestContent; Content that last.">WeTheBestContent; Content that last.</p>
     </div>
-    <div class="service-row reveal" onclick="location.href='video.html'" data-img="img/Rema/_DSC5759.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">02</div><div class="srv-title">VIDEO</div>
-      <div class="srv-desc" data-es="Producción audiovisual de principio a fin. Historias que cobran vida en movimiento." data-en="Audiovisual production from start to finish. Stories that come alive in motion.">Producción audiovisual de principio a fin. Historias que cobran vida en movimiento.</div>
-      <div class="srv-arrow">→</div>
+
+    <div class="nosotros-cta reveal">
+      <a href="index.html#trabajos" class="nosotros-cta-link" data-es="VER NUESTRO TALENTO CREATIVO →" data-en="SEE OUR CREATIVE TALENT →">VER NUESTRO TALENTO CREATIVO →</a>
     </div>
-    <div class="service-row reveal" onclick="location.href='contenido-creativo.html'" data-img="img/ansy/DSC_0408.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">03</div><div class="srv-title">CONTENIDO CREATIVO</div>
-      <div class="srv-desc" data-es="Estrategia visual para redes y plataformas. Contenido que conecta y transforma." data-en="Visual strategy for social media and platforms. Content that connects and transforms.">Estrategia visual para redes y plataformas. Contenido que conecta y transforma.</div>
-      <div class="srv-arrow">→</div>
+
+    <div class="nosotros-photos reveal">
+      <div class="nosotros-photo"><img src="img/ruben/_MG_0491_PNG.avif" alt="Rubén Erimo" decoding="async"></div>
+      <div class="nosotros-photo"><img src="img/ruben/_MG_0495_PNG.avif" alt="Rubén Erimo" decoding="async"></div>
     </div>
-    <div class="service-row reveal" onclick="location.href='direccion-de-arte.html'" data-img="img/OyK/_DSC7933.JPG">
-      <div class="srv-bg"></div>
-      <div class="srv-num">04</div><div class="srv-title">DIRECCIÓN DE ARTE</div>
-      <div class="srv-desc" data-es="Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel." data-en="Concept, style and creative vision to take your project to the next level.">Concepto, estilo y visión creativa para llevar tu proyecto al siguiente nivel.</div>
-      <div class="srv-arrow">→</div>
+
+    <div class="nosotros-clientes reveal">
+      <h2 class="nosotros-clientes-heading" data-es="Clientes" data-en="Clients">Clientes</h2>
+      <p class="nosotros-clientes-desc" data-es="Marcas, artistas y proyectos que confían en nuestra mirada. Contenido pensado, editado y producido por Rubén Erimo." data-en="Brands, artists and projects that trust our vision. Content designed, edited and produced by Rubén Erimo.">Marcas, artistas y proyectos que confían en nuestra mirada. Contenido pensado, editado y producido por Rubén Erimo.</p>
     </div>
+
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
+  <div class="footer-center">#WeTheBestContent</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
     <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>

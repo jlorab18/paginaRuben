@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fotografía — Rubén Erimo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,16 +19,12 @@
 <!-- NAV -->
 <nav id="mainNav">
   <div class="nav-logo" onclick="location.href='index.html'">
-    <div class="re-logo">
-      <div class="sq sq1">R</div><div class="sq sq2"></div>
-      <div class="sq sq3"></div><div class="sq sq4">E</div>
-    </div>
-    <span class="nav-name">Rubén Erimo</span>
+    <img src="img/logos/IMG_9656.png" alt="Rubén Erimo" class="nav-logo-img" decoding="async" width="596" height="596">
   </div>
   <ul class="nav-links">
     <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
     <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
-    <li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-toggles">
@@ -35,7 +32,7 @@
       <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
     </div>
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="index.html#contact" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+    <a href="contacto.html" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
   </div>
   <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -46,7 +43,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
   <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
-  <a href="index.html#contact" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
+  <a href="contacto.html" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
   <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
   <div class="mobile-toggles">
     <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
@@ -72,7 +69,7 @@
     </div>
 
     <div class="service-page-image">
-      <img src="img/Brandy/_DSC1110.JPG" alt="Fotografía profesional" loading="lazy">
+      <img src="img/optimized/Brandy/_DSC1110.JPG" alt="Fotografía profesional" fetchpriority="high" decoding="async" width="1467" height="2200">
     </div>
   </div>
 
@@ -102,25 +99,26 @@
   <div class="service-gallery">
     <h2 class="service-section-heading" style="margin-bottom:40px;" data-es-html="Algunas <span class='italic'>muestras</span>" data-en-html="Some <span class='italic'>samples</span>">Algunas <span class="italic">muestras</span></h2>
     <div class="gallery-grid">
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Brandy/_DSC1121.JPG" alt="Fotografía — Brandy" loading="lazy"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Rema/_DSC5188.JPG" alt="Fotografía — Rema" loading="lazy"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/fati/_IMG5965.JPG" alt="Fotografía — Fati" loading="lazy"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/OyK/_DSC7901_1.JPG" alt="Fotografía — OyK" loading="lazy"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/Rhadi/_DSC0223.JPG" alt="Fotografía — Rhadi" loading="lazy"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/ansy/DSC_0121.JPG" alt="Fotografía — Ansy" loading="lazy"></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Brandy/_DSC1121.JPG" data-full-src="img/optimized/Brandy/_DSC1121.JPG" alt="Fotografía — Brandy" loading="lazy" decoding="async" width="600" height="900"></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Rema/_DSC5188.JPG" data-full-src="img/optimized/Rema/_DSC5188.JPG" alt="Fotografía — Rema" loading="lazy" decoding="async" width="601" height="900"></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/fati/_IMG5965.JPG" data-full-src="img/optimized/fati/_IMG5965.JPG" alt="Fotografía — Fati" loading="lazy" decoding="async" width="600" height="900"></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/OyK/_DSC7901_1.JPG" data-full-src="img/optimized/OyK/_DSC7901_1.JPG" alt="Fotografía — OyK" loading="lazy" decoding="async" width="900" height="601"></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Rhadi/_DSC0223.JPG" data-full-src="img/optimized/Rhadi/_DSC0223.JPG" alt="Fotografía — Rhadi" loading="lazy" decoding="async" width="600" height="900"></div>
+      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/ansy/DSC_0121.JPG" data-full-src="img/optimized/ansy/DSC_0121.JPG" alt="Fotografía — Ansy" loading="lazy" decoding="async" width="600" height="900"></div>
     </div>
   </div>
 
   <div class="service-cta">
     <h2 class="service-section-heading" data-es-html="¿Necesitas un <span class='italic'>fotógrafo</span>?" data-en-html="Need a <span class='italic'>photographer</span>?">¿Necesitas un <span class="italic">fotógrafo</span>?</h2>
     <p data-es="Cuéntame tu proyecto y creamos juntos algo memorable." data-en="Tell me about your project and let's create something memorable together.">Cuéntame tu proyecto y creamos juntos algo memorable.</p>
-    <a href="index.html#contact" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <a href="contacto.html" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
+  <div class="footer-center">#WeTheBestContent</div>
   <div class="footer-right">
     <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
     <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
