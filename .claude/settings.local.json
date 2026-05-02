@@ -38,7 +38,11 @@
       "WebFetch(domain:rubenerimo.wixsite.com)",
       "Bash(for f in nosotros.html contacto.html visuals.html tbc-mag.html lifestyle.html contenido-creativo.html direccion-de-arte.html estudio.html eventos.html fotografia.html video.html)",
       "Bash(do sed -i '/<div class=\"\"re-logo\"\">/,/<span class=\"\"nav-name\"\">Rubén Erimo<\\\\/span>/c\\\\    <img src=\"\"img/logos/IMG_9656.png\"\" alt=\"\"Rubén Erimo\"\" class=\"\"nav-logo-img\"\">' \"$f\")",
-      "Bash(echo \"Updated $f\")"
+      "Bash(echo \"Updated $f\")",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" https://stationabt.com/ -o /tmp/stationabt_index.html)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(awk 'BEGIN{RS=\"<section\"} /HeroHome/{print \"<section\"$0; exit}' /tmp/stationabt_index.html)"
     ]
   }
 }

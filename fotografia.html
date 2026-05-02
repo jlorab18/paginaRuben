@@ -4,136 +4,152 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fotografía — Rubén Erimo</title>
+<meta name="description" content="Servicio de fotografía: eventos, retratos, producto y editorial. Por Rubén Erimo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-min.css">
 </head>
 <body>
 
-<div class="grain"></div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-label" id="cursorLabel"></div>
-
-<!-- NAV -->
-<nav id="mainNav">
-  <div class="nav-logo" onclick="location.href='index.html'">
-    <img src="img/logos/IMG_9656.png" alt="Rubén Erimo" class="nav-logo-img" decoding="async" width="596" height="596">
-  </div>
+<nav class="site-nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="img/logos/IMG_9656.png" alt="Rubén Erimo" decoding="async" width="596" height="596">
+    <span class="nav-logo-text">rubén erimo</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="index.html#trabajos" data-es="Trabajos" data-en="Work">Trabajos</a></li>
-    <li><a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a></li>
-    <li><a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="index.html#trabajos" data-es="trabajos" data-en="work">trabajos</a></li>
+    <li><a href="nosotros.html" data-es="nosotros" data-en="about">nosotros</a></li>
+    <li><a href="contacto.html" data-es="contacto" data-en="contact">contacto</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-toggles">
-      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Light</button>
-      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">dark</button>
+      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">en</button>
     </div>
-    <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener" class="nav-social">IG</a>
-    <a href="contacto.html" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
+    <a href="contacto.html" class="nav-cta" data-es="hablemos" data-en="let's talk">hablemos</a>
   </div>
-  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#trabajos" onclick="closeMenu()" data-es="Trabajos" data-en="Work">Trabajos</a>
-  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()" data-es="Contacto" data-en="Contact">Contacto</a>
-  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
+  <a href="index.html#trabajos" onclick="closeMenu()" data-es="trabajos" data-en="work">trabajos</a>
+  <a href="nosotros.html" data-es="nosotros" data-en="about">nosotros</a>
+  <a href="contacto.html" data-es="contacto" data-en="contact">contacto</a>
+  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">instagram</a>
   <div class="mobile-toggles">
-    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
-    <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
+    <button class="toggle-btn" onclick="toggleTheme()">light / dark</button>
+    <button class="toggle-btn" onclick="toggleLang()">es / en</button>
   </div>
 </div>
 
-<!-- CONTENT -->
-<div class="service-page">
-  <a href="nosotros.html#services" class="subpage-back" data-es="← Volver a servicios" data-en="← Back to services">← Volver a servicios</a>
-
-  <div class="service-page-header">
-    <div class="section-label" data-es="Servicio" data-en="Service">Servicio</div>
-    <h1 class="service-page-title">FOTOGRAFÍA</h1>
-    <p class="service-page-subtitle" data-es="Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten." data-en="Events, portraits, product, editorial. Images that aren't just seen — they're felt.">Eventos, retratos, producto, editorial. Imágenes que no solo se ven — se sienten.</p>
+<section class="subpage-hero">
+  <a href="nosotros.html" class="subpage-back" data-es="← volver a servicios" data-en="← back to services">← volver a servicios</a>
+  <div class="subpage-meta">
+    <span class="subpage-eyebrow">01</span>
+    <span class="eyebrow" data-es="servicio" data-en="service">servicio</span>
   </div>
+  <h1 class="subpage-title">
+    <span data-split data-es="fotografía" data-en="photography">fotografía</span><span class="accent" data-split>.</span>
+  </h1>
+  <p class="subpage-subtitle" data-es="eventos, retratos, producto, editorial. imágenes que no solo se ven — se sienten." data-en="events, portraits, product, editorial. images that aren't just seen — they're felt.">eventos, retratos, producto, editorial. imágenes que no solo se ven — se sienten.</p>
+</section>
 
-  <div class="service-page-body">
-    <div class="service-page-text">
-      <h2 class="service-section-heading" data-es-html="Cada imagen <span class='italic'>cuenta algo</span>" data-en-html="Every image <span class='italic'>tells a story</span>">Cada imagen <span class="italic">cuenta algo</span></h2>
-      <p data-es="La fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. Trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto." data-en="Photography isn't just about capturing a moment — it's about freezing an emotion, preserving a story and creating something that transcends time. I work with natural and artificial light to achieve the perfect atmosphere for every project.">La fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. Trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto.</p>
-      <p data-es="Desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo." data-en="From intimate portraits to large event coverage, every commission receives the same attention to detail and creative vision that defines my work.">Desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo.</p>
+<section class="service-body">
+  <div class="service-grid">
+    <div>
+      <h2 class="section-heading" data-es-html="cada imagen <span class='italic'>cuenta algo</span>" data-en-html="every image <span class='italic'>tells a story</span>">cada imagen <span class="italic">cuenta algo</span></h2>
+      <div class="service-text">
+        <p data-es="la fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto." data-en="photography isn't just about capturing a moment — it's about freezing an emotion, preserving a story and creating something that transcends time. i work with natural and artificial light to achieve the perfect atmosphere for every project.">la fotografía no es solo capturar un momento — es congelar una emoción, preservar una historia y crear algo que trascienda el tiempo. trabajo con luz natural y artificial para conseguir la atmósfera perfecta en cada proyecto.</p>
+        <p data-es="desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo." data-en="from intimate portraits to large event coverage, every commission receives the same attention to detail and creative vision that defines my work.">desde retratos íntimos hasta coberturas de eventos multitudinarios, cada encargo recibe la misma atención al detalle y visión creativa que define mi trabajo.</p>
+      </div>
     </div>
-
-    <div class="service-page-image">
+    <div class="service-image">
       <img src="img/optimized/Brandy/_DSC1110.JPG" alt="Fotografía profesional" fetchpriority="high" decoding="async" width="1467" height="2200">
     </div>
   </div>
+</section>
 
-  <div class="service-features">
-    <div class="service-feature">
-      <div class="feature-num">01</div>
-      <h3 class="feature-title" data-es="Retratos" data-en="Portraits">Retratos</h3>
-      <p class="feature-desc" data-es="Sesiones personales y profesionales. Capturo tu esencia con un enfoque artístico que va más allá de la foto convencional." data-en="Personal and professional sessions. I capture your essence with an artistic approach that goes beyond conventional photography.">Sesiones personales y profesionales. Capturo tu esencia con un enfoque artístico que va más allá de la foto convencional.</p>
+<section class="features">
+  <div class="features-grid">
+    <div class="feature">
+      <span class="feature-num">01</span>
+      <h3 class="feature-title" data-es="retratos" data-en="portraits">retratos</h3>
+      <p class="feature-desc" data-es="sesiones personales y profesionales. capturo tu esencia con un enfoque artístico que va más allá de la foto convencional." data-en="personal and professional sessions. i capture your essence with an artistic approach that goes beyond conventional photography.">sesiones personales y profesionales. capturo tu esencia con un enfoque artístico que va más allá de la foto convencional.</p>
     </div>
-    <div class="service-feature">
-      <div class="feature-num">02</div>
-      <h3 class="feature-title" data-es="Eventos" data-en="Events">Eventos</h3>
-      <p class="feature-desc" data-es="Bodas, fiestas, corporativos. Documento cada momento clave con un ojo discreto y resultados impactantes." data-en="Weddings, parties, corporate events. I document every key moment with a discreet eye and stunning results.">Bodas, fiestas, corporativos. Documento cada momento clave con un ojo discreto y resultados impactantes.</p>
+    <div class="feature">
+      <span class="feature-num">02</span>
+      <h3 class="feature-title" data-es="eventos" data-en="events">eventos</h3>
+      <p class="feature-desc" data-es="bodas, fiestas, corporativos. documento cada momento clave con un ojo discreto y resultados impactantes." data-en="weddings, parties, corporate events. i document every key moment with a discreet eye and stunning results.">bodas, fiestas, corporativos. documento cada momento clave con un ojo discreto y resultados impactantes.</p>
     </div>
-    <div class="service-feature">
-      <div class="feature-num">03</div>
-      <h3 class="feature-title" data-es="Editorial" data-en="Editorial">Editorial</h3>
-      <p class="feature-desc" data-es="Producciones para revistas, marcas y campañas. Conceptualización, dirección y ejecución visual completa." data-en="Productions for magazines, brands and campaigns. Full conceptualization, direction and visual execution.">Producciones para revistas, marcas y campañas. Conceptualización, dirección y ejecución visual completa.</p>
+    <div class="feature">
+      <span class="feature-num">03</span>
+      <h3 class="feature-title" data-es="editorial" data-en="editorial">editorial</h3>
+      <p class="feature-desc" data-es="producciones para revistas, marcas y campañas. conceptualización, dirección y ejecución visual completa." data-en="productions for magazines, brands and campaigns. full conceptualization, direction and visual execution.">producciones para revistas, marcas y campañas. conceptualización, dirección y ejecución visual completa.</p>
     </div>
-    <div class="service-feature">
-      <div class="feature-num">04</div>
-      <h3 class="feature-title" data-es="Producto" data-en="Product">Producto</h3>
-      <p class="feature-desc" data-es="Fotografía de producto para e-commerce, catálogos y redes sociales. Imágenes limpias que venden." data-en="Product photography for e-commerce, catalogs and social media. Clean images that sell.">Fotografía de producto para e-commerce, catálogos y redes sociales. Imágenes limpias que venden.</p>
+    <div class="feature">
+      <span class="feature-num">04</span>
+      <h3 class="feature-title" data-es="producto" data-en="product">producto</h3>
+      <p class="feature-desc" data-es="fotografía de producto para e-commerce, catálogos y redes sociales. imágenes limpias que venden." data-en="product photography for e-commerce, catalogs and social media. clean images that sell.">fotografía de producto para e-commerce, catálogos y redes sociales. imágenes limpias que venden.</p>
     </div>
   </div>
+</section>
 
-  <div class="service-gallery">
-    <h2 class="service-section-heading" style="margin-bottom:40px;" data-es-html="Algunas <span class='italic'>muestras</span>" data-en-html="Some <span class='italic'>samples</span>">Algunas <span class="italic">muestras</span></h2>
-    <div class="gallery-grid">
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Brandy/_DSC1121.JPG" data-full-src="img/optimized/Brandy/_DSC1121.JPG" alt="Fotografía — Brandy" loading="lazy" decoding="async" width="600" height="900"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Rema/_DSC5188.JPG" data-full-src="img/optimized/Rema/_DSC5188.JPG" alt="Fotografía — Rema" loading="lazy" decoding="async" width="601" height="900"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/fati/_IMG5965.JPG" data-full-src="img/optimized/fati/_IMG5965.JPG" alt="Fotografía — Fati" loading="lazy" decoding="async" width="600" height="900"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/OyK/_DSC7901_1.JPG" data-full-src="img/optimized/OyK/_DSC7901_1.JPG" alt="Fotografía — OyK" loading="lazy" decoding="async" width="900" height="601"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Rhadi/_DSC0223.JPG" data-full-src="img/optimized/Rhadi/_DSC0223.JPG" alt="Fotografía — Rhadi" loading="lazy" decoding="async" width="600" height="900"></div>
-      <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/ansy/DSC_0121.JPG" data-full-src="img/optimized/ansy/DSC_0121.JPG" alt="Fotografía — Ansy" loading="lazy" decoding="async" width="600" height="900"></div>
-    </div>
+<section class="service-showreel">
+  <h2 class="section-heading" style="margin-bottom:60px" data-es-html="algunas <span class='italic'>muestras</span>" data-en-html="some <span class='italic'>samples</span>">algunas <span class="italic">muestras</span></h2>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Brandy/_DSC1121.JPG" data-full-src="img/optimized/Brandy/_DSC1121.JPG" alt="Fotografía — Brandy" loading="lazy" decoding="async" width="600" height="900"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Rema/_DSC5188.JPG" data-full-src="img/optimized/Rema/_DSC5188.JPG" alt="Fotografía — Rema" loading="lazy" decoding="async" width="601" height="900"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/fati/_IMG5965.JPG" data-full-src="img/optimized/fati/_IMG5965.JPG" alt="Fotografía — Fati" loading="lazy" decoding="async" width="600" height="900"></div>
+    <div class="gallery-item wide" onclick="openLightbox(this)"><img src="img/thumbs/OyK/_DSC7901_1.JPG" data-full-src="img/optimized/OyK/_DSC7901_1.JPG" alt="Fotografía — OyK" loading="lazy" decoding="async" width="900" height="601"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/Rhadi/_DSC0223.JPG" data-full-src="img/optimized/Rhadi/_DSC0223.JPG" alt="Fotografía — Rhadi" loading="lazy" decoding="async" width="600" height="900"></div>
+    <div class="gallery-item" onclick="openLightbox(this)"><img src="img/thumbs/ansy/DSC_0121.JPG" data-full-src="img/optimized/ansy/DSC_0121.JPG" alt="Fotografía — Ansy" loading="lazy" decoding="async" width="600" height="900"></div>
   </div>
+</section>
 
-  <div class="service-cta">
-    <h2 class="service-section-heading" data-es-html="¿Necesitas un <span class='italic'>fotógrafo</span>?" data-en-html="Need a <span class='italic'>photographer</span>?">¿Necesitas un <span class="italic">fotógrafo</span>?</h2>
-    <p data-es="Cuéntame tu proyecto y creamos juntos algo memorable." data-en="Tell me about your project and let's create something memorable together.">Cuéntame tu proyecto y creamos juntos algo memorable.</p>
-    <a href="contacto.html" class="cta-btn"><span data-es="Hablemos" data-en="Let's talk">Hablemos <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6M19 6L14 11M19 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-  </div>
+<section class="service-cta">
+  <h2 class="section-heading" data-es-html="¿necesitas un <span class='italic'>fotógrafo</span>?" data-en-html="need a <span class='italic'>photographer</span>?">¿necesitas un <span class="italic">fotógrafo</span>?</h2>
+  <p data-es="cuéntame tu proyecto y creamos juntos algo memorable." data-en="tell me about your project and let's create something memorable together.">cuéntame tu proyecto y creamos juntos algo memorable.</p>
+  <a href="contacto.html" class="cta-btn" data-es="hablemos →" data-en="let's talk →">hablemos →</a>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Cerrar">✕</button>
+  <button class="lightbox-prev" onclick="navLightbox(-1, event)" aria-label="Anterior">‹</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" onclick="navLightbox(1, event)" aria-label="Siguiente">›</button>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-left">© 2025 RUBÉN ERIMO — ALL RIGHTS RESERVED</div>
-  <div class="footer-center">#WeTheBestContent</div>
-  <div class="footer-right">
-    <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">IG</a>
-    <a href="index.html#trabajos" data-es="Proyectos" data-en="Projects">Proyectos</a>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-es="Arriba ↑" data-en="Top ↑">Arriba ↑</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">rubén <span class="accent">erimo</span>.</div>
+      <p class="footer-tagline">#WeTheBestContent — content that lasts.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-es="navegación" data-en="navigation">navegación</h4>
+      <ul>
+        <li><a href="index.html#trabajos" data-es="trabajos" data-en="work">trabajos</a></li>
+        <li><a href="nosotros.html" data-es="nosotros" data-en="about">nosotros</a></li>
+        <li><a href="contacto.html" data-es="contacto" data-en="contact">contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-es="redes" data-en="social">redes</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">instagram</a></li>
+        <li><a href="https://www.youtube.com/@RubenErimo" target="_blank" rel="noopener">youtube</a></li>
+        <li><a href="mailto:rubenerimo@gmail.com">email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 rubén erimo — all rights reserved</span>
+    <span data-es="hecho con cuidado" data-en="made with care">hecho con cuidado</span>
   </div>
 </footer>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
-  <button class="lightbox-prev" onclick="navLightbox(-1, event)">‹</button>
-  <img class="lightbox-img" id="lightboxImg" src="" alt="">
-  <button class="lightbox-next" onclick="navLightbox(1, event)">›</button>
-  <div class="lightbox-counter" id="lightboxCounter"></div>
-</div>
 
 <script src="main.js"></script>
 </body>

@@ -196,15 +196,21 @@ if (lightbox) {
 
 // ═══════════ THEME TOGGLE ═══════════
 function toggleTheme() {
-  const isLight = document.body.classList.toggle('light');
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  const goingLight = !document.body.classList.contains('light');
+  setTheme(goingLight ? 'light' : 'dark');
+}
+function setTheme(t) {
+  document.body.classList.toggle('light', t === 'light');
+  document.body.classList.toggle('dark', t === 'dark');
+  localStorage.setItem('theme', t);
   updateThemeBtn();
 }
 function updateThemeBtn() {
   const isLight = document.body.classList.contains('light');
-  document.querySelectorAll('#themeToggle').forEach(b => b.textContent = isLight ? 'Dark' : 'Light');
+  document.querySelectorAll('#themeToggle').forEach(b => b.textContent = isLight ? 'dark' : 'light');
 }
-if (localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light' || savedTheme === 'dark') document.body.classList.add(savedTheme);
 updateThemeBtn();
 
 // ═══════════ LANGUAGE TOGGLE ═══════════
@@ -222,13 +228,17 @@ function applyLang() {
       const svg = el.querySelector('svg');
       if (svg) { el.textContent = text + ' '; el.appendChild(svg); }
       else el.textContent = text;
+      if (el.hasAttribute('data-split')) {
+        el.removeAttribute('data-original');
+        if (typeof splitText === 'function') splitText(el);
+      }
     }
   });
   document.querySelectorAll('[data-es-html]').forEach(el => {
     const html = el.getAttribute('data-' + currentLang + '-html');
     if (html) el.innerHTML = html;
   });
-  document.querySelectorAll('#langToggle').forEach(b => b.textContent = currentLang === 'es' ? 'EN' : 'ES');
+  document.querySelectorAll('#langToggle').forEach(b => b.textContent = currentLang === 'es' ? 'en' : 'es');
   document.documentElement.lang = currentLang;
 }
 if (currentLang !== 'es') applyLang();
@@ -361,3 +371,31 @@ document.addEventListener('keydown', event => {
   }
   tick();
 })();
+
+// ═══════════ CHAR SPLIT REVEAL ═══════════
+const splitObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('split-vis');
+      splitObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+function splitText(el) {
+  const cached = el.getAttribute('data-original') || el.textContent;
+  el.setAttribute('data-original', cached);
+  el.innerHTML = '';
+  el.classList.remove('split-vis');
+  for (let i = 0; i < cached.length; i++) {
+    const ch = cached[i];
+    const s = document.createElement('span');
+    s.className = 'split-char';
+    s.style.transitionDelay = (i * 0.025) + 's';
+    s.textContent = ch === ' ' ? ' ' : ch;
+    el.appendChild(s);
+  }
+  splitObs.observe(el);
+}
+
+document.querySelectorAll('[data-split]').forEach(splitText);
