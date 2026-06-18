@@ -37,7 +37,10 @@ if (slides.length) {
     slides[cur].classList.add('active');
     dots[prev].classList.remove('active');
     dots[cur].classList.add('active');
-    counter.textContent = String(cur + 1).padStart(2, '0');
+    if (counter) {
+      const total = String(slides.length).padStart(2, '0');
+      counter.textContent = String(cur + 1).padStart(2, '0') + ' / ' + total;
+    }
   }
   function nextSlide() { goSlide((cur + 1) % slides.length); }
   function startAuto() {
@@ -399,3 +402,107 @@ function splitText(el) {
 }
 
 document.querySelectorAll('[data-split]').forEach(splitText);
+
+// ═══════════ VISUALS STRIP — 3s rotation ═══════════
+(function() {
+  const items = document.querySelectorAll('.visuals-strip-item');
+  if (!items.length) return;
+  const videos = Array.from(items).map(it => it.querySelector('video'));
+
+  // Pause non-active videos for perf
+  videos.forEach((v, i) => {
+    if (!v) return;
+    if (i === 0) { v.play().catch(() => {}); }
+    else { v.removeAttribute('autoplay'); v.pause(); }
+  });
+
+  let cur = 0;
+  function nextItem() {
+    const prev = cur;
+    cur = (cur + 1) % items.length;
+    items[prev].classList.remove('active');
+    items[cur].classList.add('active');
+    if (videos[prev]) videos[prev].pause();
+    if (videos[cur]) { videos[cur].currentTime = 0; videos[cur].play().catch(() => {}); }
+  }
+
+  if (!prefersReducedMotion()) {
+    setInterval(nextItem, 3000);
+  }
+})();
+
+// ═══════════ VIDEO LIGHTBOX (visuals.html) ═══════════
+(function() {
+  const lb = document.getElementById('videoLightbox');
+  if (!lb) return;
+  const lbVideo = lb.querySelector('video');
+  const lbClose = lb.querySelector('.video-lightbox-close');
+
+  window.openVideo = function(src) {
+    lbVideo.src = src;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbVideo.play().catch(() => {});
+  };
+
+  function closeVideo() {
+    lb.classList.remove('open');
+    lbVideo.pause();
+    lbVideo.removeAttribute('src');
+    lbVideo.load();
+    document.body.style.overflow = '';
+  }
+
+  lb.addEventListener('click', e => {
+    if (e.target === lb || e.target === lbClose) closeVideo();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeVideo();
+  });
+})();
+
+// ═══════════ CONTACT FORM (Formspree) ═══════════
+(function() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const status = document.getElementById('formStatus');
+  const submit = form.querySelector('button[type="submit"]');
+
+  const msgs = {
+    es: { sending: 'Enviando…', ok: 'Recibido. Te contesto en breve. ✓', err: 'Algo falló. Intenta de nuevo o escríbeme a rubenerimo@gmail.com.' },
+    en: { sending: 'Sending…', ok: "Got it. I'll reply shortly. ✓", err: 'Something failed. Try again or email rubenerimo@gmail.com.' }
+  };
+  const lang = () => (document.documentElement.lang === 'en' ? 'en' : 'es');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const action = form.getAttribute('action');
+    if (action.includes('REPLACE_WITH_YOUR_FORM_ID')) {
+      status.className = 'form-status err';
+      status.textContent = 'Form not configured. Replace REPLACE_WITH_YOUR_FORM_ID in contacto.html with your Formspree form ID (formspree.io).';
+      return;
+    }
+    status.className = 'form-status';
+    status.textContent = msgs[lang()].sending;
+    submit.disabled = true;
+    try {
+      const res = await fetch(action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        status.className = 'form-status ok';
+        status.textContent = msgs[lang()].ok;
+        form.reset();
+      } else {
+        throw new Error('bad status ' + res.status);
+      }
+    } catch (err) {
+      status.className = 'form-status err';
+      status.textContent = msgs[lang()].err;
+    } finally {
+      submit.disabled = false;
+    }
+  });
+})();

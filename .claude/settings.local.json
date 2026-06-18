@@ -42,7 +42,8 @@
       "Bash(curl -sL -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" https://stationabt.com/ -o /tmp/stationabt_index.html)",
       "Read(//tmp/**)",
       "Bash(python3 -c ' *)",
-      "Bash(awk 'BEGIN{RS=\"<section\"} /HeroHome/{print \"<section\"$0; exit}' /tmp/stationabt_index.html)"
+      "Bash(awk 'BEGIN{RS=\"<section\"} /HeroHome/{print \"<section\"$0; exit}' /tmp/stationabt_index.html)",
+      "Bash(bash _fix_caps.sh)"
     ]
   }
 }

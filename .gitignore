@@ -1,0 +1,20 @@
+# ─────────────────────────────────────────
+#  Original full-resolution image backup
+#  (2.6 GB — kept local only, optimized
+#   versions live in img-min/ and are pushed)
+# ─────────────────────────────────────────
+img/
+
+# Build/tooling artifacts
+node_modules/
+package.json
+package-lock.json
+*.log
+
+# Local Claude/IDE state
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

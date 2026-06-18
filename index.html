@@ -3,204 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rubén Erimo — Creative Photographer</title>
-<meta name="description" content="Rubén Erimo, fotógrafo y filmmaker. WeTheBestContent — plataforma audiovisual editorial.">
+<title>Rubén Erimo — Creative Director</title>
+<meta name="description" content="Rubén Erimo, Creative Director. WeTheBestContent — plataforma audiovisual editorial.">
+<link rel="icon" type="image/png" href="img-min/logos/img-9656.png">
+<link rel="canonical" href="https://jlorab18.github.io/paginaRuben/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rubén Erimo — WeTheBestContent">
+<meta property="og:title" content="Rubén Erimo — Creative Director">
+<meta property="og:description" content="Rubén Erimo, Creative Director. WeTheBestContent — plataforma audiovisual editorial.">
+<meta property="og:url" content="https://jlorab18.github.io/paginaRuben/">
+<meta property="og:image" content="https://jlorab18.github.io/paginaRuben/img-min/slider/1.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rubén Erimo — Creative Director">
+<meta name="twitter:description" content="Rubén Erimo, Creative Director. WeTheBestContent — plataforma audiovisual editorial.">
+<meta name="twitter:image" content="https://jlorab18.github.io/paginaRuben/img-min/slider/1.jpg">
+<meta name="twitter:creator" content="@rubenerimo">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@400;500;600&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-min.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="site-nav" id="mainNav">
-  <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <img src="img/logos/IMG_9656.png" alt="Rubén Erimo" decoding="async" width="596" height="596">
-    <span class="nav-logo-text">rubén erimo</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#trabajos" data-es="trabajos" data-en="work">trabajos</a></li>
-    <li><a href="nosotros.html" data-es="nosotros" data-en="about">nosotros</a></li>
-    <li><a href="contacto.html" data-es="contacto" data-en="contact">contacto</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-toggles">
-      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">dark</button>
-      <button class="toggle-btn" id="langToggle" onclick="toggleLang()">en</button>
-    </div>
-    <a href="contacto.html" class="nav-cta" data-es="hablemos" data-en="let's talk">hablemos</a>
-  </div>
-  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<div id="nav-slot"></div>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#trabajos" onclick="closeMenu()" data-es="trabajos" data-en="work">trabajos</a>
-  <a href="nosotros.html" data-es="nosotros" data-en="about">nosotros</a>
-  <a href="contacto.html" data-es="contacto" data-en="contact">contacto</a>
-  <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">instagram</a>
-  <div class="mobile-toggles">
-    <button class="toggle-btn" onclick="toggleTheme()">light / dark</button>
-    <button class="toggle-btn" onclick="toggleLang()">es / en</button>
-  </div>
-</div>
-
-<!-- HERO -->
+<!-- HERO with slider -->
 <section class="hero">
-  <div class="hero-image">
-    <img src="img/optimized/Brandy/_DSC1110.JPG" alt="Sesión Brandy" fetchpriority="high" decoding="async" width="1467" height="2200">
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-slide active"><img src="img-min/slider/1.jpg" alt="Slide 1" fetchpriority="high" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/2.jpg" alt="Slide 2" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/3.png" alt="Slide 3" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/4.jpg" alt="Slide 4" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/5.jpg" alt="Slide 5" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/6.png" alt="Slide 6" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/7.jpg" alt="Slide 7" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/8.jpg" alt="Slide 8" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/9.png" alt="Slide 9" loading="lazy" decoding="async"></div>
+    <div class="hero-slide"><img src="img-min/slider/10.jpg" alt="Slide 10" loading="lazy" decoding="async"></div>
+    <div class="hero-counter" id="heroCounter">01 / 10</div>
+    <div class="hero-dots" id="heroDots">
+      <span class="hero-dot active" data-i="0"></span>
+      <span class="hero-dot" data-i="1"></span>
+      <span class="hero-dot" data-i="2"></span>
+      <span class="hero-dot" data-i="3"></span>
+      <span class="hero-dot" data-i="4"></span>
+      <span class="hero-dot" data-i="5"></span>
+      <span class="hero-dot" data-i="6"></span>
+      <span class="hero-dot" data-i="7"></span>
+      <span class="hero-dot" data-i="8"></span>
+      <span class="hero-dot" data-i="9"></span>
+    </div>
   </div>
+
   <div class="hero-inner">
-    <div class="hero-eyebrow eyebrow" data-es="creative photographer" data-en="creative photographer">creative photographer</div>
+    <div class="hero-eyebrow eyebrow" data-es="Creative Director" data-en="Creative Director">Creative Director</div>
     <h1 class="hero-title">
-      <span data-split>rubén</span><br>
-      <span data-split>erimo</span><span class="accent" data-split>.</span>
+      <span data-split>Rubén</span><br>
+      <span data-split>Erimo</span><span class="accent" data-split>.</span>
     </h1>
     <div class="hero-meta">
-      <p class="hero-phrase" data-es="donde la luz habla, mi lente escucha." data-en="where light speaks, my lens listens.">donde la luz habla, mi lente escucha.</p>
-      <a href="#trabajos" class="hero-scroll">
+      <a href="proyectos.html" class="hero-scroll">
         <span class="hero-scroll-dot" aria-hidden="true"></span>
-        <span data-es="trabajos" data-en="work">trabajos</span>
+        <span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="intro">
-  <div class="container">
-    <div class="intro-grid">
-      <div>
-        <div class="intro-eyebrow eyebrow" data-es="estudio" data-en="studio">estudio</div>
-        <h2 class="intro-title">
-          <span data-split data-es="contenido" data-en="content">contenido</span><br>
-          <span data-split data-es="que " data-en="that ">que </span><span class="accent" data-split data-es="permanece." data-en="lasts.">permanece.</span>
-        </h2>
-      </div>
-      <div class="intro-text reveal">
-        <p data-es="WeTheBestContent es una plataforma audiovisual donde cada proyecto se concibe como una pieza editorial. Fundada por Rubén Erimo, la marca surge desde la necesidad de crear con criterio, intención y mirada clara." data-en="WeTheBestContent is an audiovisual platform where every project is conceived as an editorial piece. Founded by Rubén Erimo, the brand arises from the need to create with criteria, intention and a clear vision.">WeTheBestContent es una plataforma audiovisual donde cada proyecto se concibe como una pieza editorial. Fundada por Rubén Erimo, la marca surge desde la necesidad de crear con criterio, intención y mirada clara.</p>
-        <p data-es="Personas reales, espacios reales, emociones reales. Un enfoque entre lo documental, lo editorial y lo cinematográfico." data-en="Real people, real spaces, real emotions. An approach between documentary, editorial and cinematographic.">Personas reales, espacios reales, emociones reales. Un enfoque entre lo documental, lo editorial y lo cinematográfico.</p>
-      </div>
-    </div>
+<!-- VISUALS STRIP — rotates every 3s with Rubén Erimo logo overlaid -->
+<section class="visuals-strip" id="visualsStrip">
+  <div class="visuals-strip-track" id="visualsTrack">
+    <div class="visuals-strip-item active"><video src="img-min/visuals/rotatorios/1.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/2.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/3.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/4.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/5.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/6.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/7.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/8.mp4" muted loop playsinline preload="metadata"></video></div>
+    <div class="visuals-strip-item"><video src="img-min/visuals/rotatorios/9.mp4" muted loop playsinline preload="metadata"></video></div>
   </div>
-</section>
-
-<!-- WORK -->
-<section class="work" id="trabajos">
-  <div class="container">
-    <div class="work-header reveal">
-      <h2 class="work-title">
-        <span data-split data-es="trabajos" data-en="work">trabajos</span><span class="accent" data-split>.</span>
-      </h2>
-      <p class="work-sub" data-es="una selección de proyectos editoriales, eventos y dirección de arte." data-en="a selection of editorial projects, events and art direction.">una selección de proyectos editoriales, eventos y dirección de arte.</p>
-    </div>
-
-    <div class="work-grid">
-
-      <a class="work-item" href="tbc-mag.html" aria-label="TBC MAG">
-        <div class="work-item-img">
-          <img src="img/optimized/Brandy/_DSC1121.JPG" alt="TBC MAG" loading="lazy" decoding="async" width="1467" height="2200">
-        </div>
-        <div class="work-item-meta">
-          <span class="work-item-num">01</span>
-          <span class="work-item-title">tbc mag</span>
-          <span class="work-item-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-
-      <a class="work-item" href="estudio.html" aria-label="Estudio">
-        <div class="work-item-img">
-          <img src="img/optimized/fati/_IMG5869.JPG" alt="Estudio" loading="lazy" decoding="async" width="1467" height="2200">
-        </div>
-        <div class="work-item-meta">
-          <span class="work-item-num">02</span>
-          <span class="work-item-title" data-es="estudio" data-en="studio">estudio</span>
-          <span class="work-item-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-
-      <a class="work-item" href="eventos.html" aria-label="Eventos">
-        <div class="work-item-img">
-          <img src="img/optimized/OyK/_DSC7702_1.JPG" alt="Eventos" loading="lazy" decoding="async" width="1469" height="2200">
-        </div>
-        <div class="work-item-meta">
-          <span class="work-item-num">03</span>
-          <span class="work-item-title" data-es="eventos" data-en="events">eventos</span>
-          <span class="work-item-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-
-      <a class="work-item" href="lifestyle.html" aria-label="Lifestyle">
-        <div class="work-item-img">
-          <img src="img/optimized/ansy/DSC_0065.JPG" alt="Lifestyle" loading="lazy" decoding="async" width="1467" height="2200">
-        </div>
-        <div class="work-item-meta">
-          <span class="work-item-num">04</span>
-          <span class="work-item-title">lifestyle</span>
-          <span class="work-item-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-
-      <a class="work-item" href="visuals.html" aria-label="Visuals">
-        <div class="work-item-img">
-          <img src="img/optimized/seng/IMG_2329.JPG" alt="Visuals" loading="lazy" decoding="async" width="1467" height="2200">
-        </div>
-        <div class="work-item-meta">
-          <span class="work-item-num">05</span>
-          <span class="work-item-title">visuals</span>
-          <span class="work-item-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-
-    </div>
+  <div class="visuals-strip-overlay"></div>
+  <div class="visuals-strip-logo">
+    <img src="img-min/logos/img-9656.png" alt="Rubén Erimo">
+    <span class="visuals-strip-tag">Dynamic Visuals</span>
   </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <div class="cta-eyebrow eyebrow reveal" data-es="trabajemos juntos" data-en="let's work together">trabajemos juntos</div>
-    <a href="contacto.html" class="cta-link">
-      <span data-split data-es="hablemos" data-en="let's talk">hablemos</span><span class="accent" data-split>.</span>
-    </a>
-    <div class="cta-mail reveal">
-      <a href="mailto:rubenerimo@gmail.com">rubenerimo@gmail.com</a>
-    </div>
+  <div class="visuals-strip-meta">
+    <span data-es="Piezas seleccionadas" data-en="Selected pieces">Piezas seleccionadas</span>
+    <a href="visuals.html" class="visuals-strip-link" data-es="Ver todos →" data-en="View all →">Ver todos →</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">rubén <span class="accent">erimo</span>.</div>
-      <p class="footer-tagline">#WeTheBestContent — content that lasts.</p>
-    </div>
-    <div class="footer-col">
-      <h4 data-es="navegación" data-en="navigation">navegación</h4>
-      <ul>
-        <li><a href="#trabajos" data-es="trabajos" data-en="work">trabajos</a></li>
-        <li><a href="nosotros.html" data-es="nosotros" data-en="about">nosotros</a></li>
-        <li><a href="contacto.html" data-es="contacto" data-en="contact">contacto</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4 data-es="redes" data-en="social">redes</h4>
-      <ul>
-        <li><a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">instagram</a></li>
-        <li><a href="https://www.youtube.com/@RubenErimo" target="_blank" rel="noopener">youtube</a></li>
-        <li><a href="mailto:rubenerimo@gmail.com">email</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 rubén erimo — all rights reserved</span>
-    <span data-es="hecho con cuidado" data-en="made with care">hecho con cuidado</span>
-  </div>
-</footer>
+<div id="footer-slot"></div>
 
+<script src="partials.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
