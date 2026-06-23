@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jlorab18.github.io/paginaRuben/sitemap.xml
+Sitemap: https://rubenerimo.com/sitemap.xml
