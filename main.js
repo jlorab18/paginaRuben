@@ -506,3 +506,26 @@ document.querySelectorAll('[data-split]').forEach(splitText);
     }
   });
 })();
+
+// ═══════════ ABOUT VIDEO — interactive audio toggle ═══════════
+(function() {
+  const btn = document.getElementById('audioToggle');
+  const video = document.getElementById('aboutVideo');
+  if (!btn || !video) return;
+  const iconMuted = btn.querySelector('.icon-muted');
+  const iconUnmuted = btn.querySelector('.icon-unmuted');
+
+  btn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    if (video.muted) {
+      iconMuted.style.display = '';
+      iconUnmuted.style.display = 'none';
+      btn.setAttribute('aria-label', 'Activar audio');
+    } else {
+      iconMuted.style.display = 'none';
+      iconUnmuted.style.display = '';
+      btn.setAttribute('aria-label', 'Silenciar audio');
+      video.play().catch(() => {});
+    }
+  });
+})();

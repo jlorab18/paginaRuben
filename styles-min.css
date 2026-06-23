@@ -1054,6 +1054,50 @@ h1, h2, h3, h4 {
 .about-photos > div:hover img,
 .about-photos > div:hover video { transform: scale(1.04); }
 
+/* About video block — full width, single video, audio toggle overlay */
+.about-video-block {
+  position: relative;
+  margin-top: clamp(40px, 6vh, 80px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+.about-video-block video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.audio-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 5;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.audio-toggle:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.06);
+}
+.audio-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 @media (max-width: 800px) {
   .about-grid { grid-template-columns: 1fr; }
   .about-photos { grid-template-columns: 1fr; }
@@ -1228,6 +1272,24 @@ h1, h2, h3, h4 {
 .contact-hero.centered .contact-hero-title { text-align: center; }
 .contact-hero.centered .contact-socials { justify-content: center; }
 
+/* Big prominent email link below the Contáctanos title */
+.contact-email-large {
+  display: inline-block;
+  margin-top: clamp(32px, 5vh, 56px);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(22px, 3vw, 40px);
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 6px;
+  transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+.contact-email-large:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
 /* ─────────────────────────────────────────────
    CLIENTES SECTION (nosotros.html)
    ───────────────────────────────────────────── */
@@ -1273,26 +1335,39 @@ h1, h2, h3, h4 {
   aspect-ratio: 3 / 2;
   display: grid;
   place-items: center;
-  padding: 16px;
+  padding: 18px;
   border: 1px solid var(--line);
-  background: transparent;
-  transition: border-color 0.3s, transform 0.3s;
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .cliente-logo:hover {
   border-color: var(--text);
+  background: rgba(0, 0, 0, 0.07);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
   transform: translateY(-2px);
 }
 .cliente-logo img {
   max-width: 100%;
-  max-height: 64px;
+  max-height: 72px;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.7;
-  transition: filter 0.3s, opacity 0.3s;
+  opacity: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+  transition: filter 0.3s, transform 0.3s;
 }
 .cliente-logo:hover img {
-  filter: grayscale(0);
-  opacity: 1;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+  transform: scale(1.03);
+}
+
+/* Dark mode: invert the card tint so logos still pop */
+body.dark .cliente-logo {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+body.dark .cliente-logo:hover {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.55);
 }
 .cliente-logo.placeholder {
   font-family: var(--font-neutral);

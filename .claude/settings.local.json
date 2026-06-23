@@ -43,7 +43,11 @@
       "Read(//tmp/**)",
       "Bash(python3 -c ' *)",
       "Bash(awk 'BEGIN{RS=\"<section\"} /HeroHome/{print \"<section\"$0; exit}' /tmp/stationabt_index.html)",
-      "Bash(bash _fix_caps.sh)"
+      "Bash(bash _fix_caps.sh)",
+      "Bash(git config *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
