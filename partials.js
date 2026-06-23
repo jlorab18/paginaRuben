@@ -14,7 +14,6 @@ window.PARTIALS = {
   </ul>
   <div class="nav-right">
     <div class="nav-toggles">
-      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">Dark</button>
       <button class="toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
     </div>
     <a href="contacto.html" class="nav-cta" data-es="Hablemos" data-en="Let's talk">Hablemos</a>
@@ -29,7 +28,6 @@ window.PARTIALS = {
   <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
   <a href="https://www.instagram.com/rubenerimo" target="_blank" rel="noopener">Instagram</a>
   <div class="mobile-toggles">
-    <button class="toggle-btn" onclick="toggleTheme()">Light / Dark</button>
     <button class="toggle-btn" onclick="toggleLang()">ES / EN</button>
   </div>
 </div>`,

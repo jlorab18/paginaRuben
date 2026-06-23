@@ -197,25 +197,6 @@ if (lightbox) {
   lightbox.setAttribute('aria-modal', 'true');
 }
 
-// ═══════════ THEME TOGGLE ═══════════
-function toggleTheme() {
-  const goingLight = !document.body.classList.contains('light');
-  setTheme(goingLight ? 'light' : 'dark');
-}
-function setTheme(t) {
-  document.body.classList.toggle('light', t === 'light');
-  document.body.classList.toggle('dark', t === 'dark');
-  localStorage.setItem('theme', t);
-  updateThemeBtn();
-}
-function updateThemeBtn() {
-  const isLight = document.body.classList.contains('light');
-  document.querySelectorAll('#themeToggle').forEach(b => b.textContent = isLight ? 'dark' : 'light');
-}
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light' || savedTheme === 'dark') document.body.classList.add(savedTheme);
-updateThemeBtn();
-
 // ═══════════ LANGUAGE TOGGLE ═══════════
 let currentLang = localStorage.getItem('lang') || 'es';
 

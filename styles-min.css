@@ -4,11 +4,11 @@
    ───────────────────────────────────────────── */
 
 :root {
-  --bg: #f6f4ef;
-  --text: #161616;
-  --muted: #6b6b6b;
-  --line: rgba(22, 22, 22, 0.12);
-  --accent: #8a7459;
+  --bg: #0c0c0c;
+  --text: #f0eee9;
+  --muted: #888;
+  --line: rgba(240, 238, 233, 0.12);
+  --accent: #c4a585;
   --red: #d62828;
   --bg-dark: #0c0c0c;
   --text-dark: #f0eee9;
@@ -46,14 +46,6 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
   outline-offset: 4px;
 }
 
-/* dark mode toggle */
-body.dark {
-  --bg: #0c0c0c;
-  --text: #f0eee9;
-  --muted: #888;
-  --line: rgba(240, 238, 233, 0.12);
-  --accent: #c4a585;
-}
 
 /* ─────────────────────────────────────────────
    TYPOGRAPHY
@@ -1009,51 +1001,51 @@ h1, h2, h3, h4 {
 }
 .about-heading .accent { font-style: italic; color: var(--accent); }
 
-/* Eyebrow label — sits between heading and video */
+/* 2-column layout: video on the left, eyebrow+text on the right */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: start;
+}
 .about-eyebrow {
   display: block;
   margin-bottom: clamp(20px, 3vh, 32px);
 }
+.about-text-col { padding-top: 4px; }
 
-/* Text block below the video — centered max-width column */
 .about-text {
-  font-family: var(--font-serif);
-  font-size: clamp(18px, 1.5vw, 24px);
-  line-height: 1.55;
+  font-family: var(--font-neutral);
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.65;
   color: var(--muted);
-  max-width: 820px;
-  margin: clamp(40px, 6vh, 80px) auto 0;
 }
-.about-text.neutral { font-family: var(--font-neutral); font-style: normal; font-size: clamp(16px, 1.2vw, 19px); line-height: 1.65; }
-.about-text p + p { margin-top: 22px; }
-.about-text strong { color: var(--text); font-weight: 400; font-style: normal; font-family: var(--font-sans); }
+.about-text p + p { margin-top: 20px; }
+.about-text strong { color: var(--text); font-weight: 500; font-style: normal; }
 .about-tagline {
   font-family: var(--font-serif);
   font-style: italic;
   color: var(--accent);
-  margin-top: 40px;
-  font-size: clamp(20px, 1.8vw, 28px);
+  margin-top: 32px;
+  font-size: clamp(18px, 1.5vw, 24px);
 }
 
-/* About video block — fits the video at its natural ratio without cropping.
-   Caps the height so a tall (portrait) video doesn't dominate the page,
-   and lets a wide (landscape) one fill the column. */
+/* About video — fits its natural aspect (16:9 landscape) inside the column */
 .about-video-block {
   position: relative;
   background: #000;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 .about-video-block video {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 75vh;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .about-grid { grid-template-columns: 1fr; gap: clamp(32px, 5vh, 48px); }
 }
 .audio-toggle {
   position: absolute;
@@ -1337,14 +1329,14 @@ h1, h2, h3, h4 {
   place-items: center;
   padding: 18px;
   border: 1px solid var(--line);
-  background: rgba(0, 0, 0, 0.04);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .cliente-logo:hover {
   border-color: var(--text);
-  background: rgba(0, 0, 0, 0.07);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.55);
   transform: translateY(-2px);
 }
 .cliente-logo img {
@@ -1352,22 +1344,12 @@ h1, h2, h3, h4 {
   max-height: 72px;
   object-fit: contain;
   opacity: 1;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
   transition: filter 0.3s, transform 0.3s;
 }
 .cliente-logo:hover img {
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
   transform: scale(1.03);
-}
-
-/* Dark mode: invert the card tint so logos still pop */
-body.dark .cliente-logo {
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-}
-body.dark .cliente-logo:hover {
-  background: rgba(255, 255, 255, 0.07);
-  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.55);
 }
 .cliente-logo.placeholder {
   font-family: var(--font-neutral);
